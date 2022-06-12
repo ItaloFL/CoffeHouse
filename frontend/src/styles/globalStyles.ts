@@ -10,10 +10,10 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: #121212;
+    font-family: var(--type-frist);
   }
 
   :root {
-    
     --type-frist: 'Roboto', Arial, sans-serif;
     --type-second: 'Poppins', georgia;
   }
