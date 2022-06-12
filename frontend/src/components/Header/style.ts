@@ -1,9 +1,12 @@
 import styled from 'styled-components'
-import ArrowDown from '../../assets/down-arrow.svg'
 import User from '../../assets/user.svg'
+import { Container } from '../../styles/layout/Container'
 
 export const HeaderWrapper = styled.div`
   background-color: #27272a;
+`
+
+export const HeaderContent = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,7 +15,7 @@ export const HeaderWrapper = styled.div`
   font-family: 'Roboto';
 `
 
-export const MenuWrapper = styled.div`
+export const MenuWrapper = styled(Container)`
   display: flex;
   align-items: center;
 `
@@ -34,13 +37,12 @@ export const MenuItens = styled.ul`
 
   li::after {
     content: '';
-    
   }
 `
 
 export const SignInButton = styled.button`
   font-size: 0.75rem;
-  color: #FFFFFF;
+  color: #ffffff;
   background: transparent;
   text-transform: uppercase;
   padding: 10px 24px;
@@ -57,8 +59,8 @@ export const SignInButton = styled.button`
 
 export const SignUpButton = styled.button`
   font-size: 0.75rem;
-  color: #FFFFFF;
-  border: 1px solid #5B51FF;
+  color: #ffffff;
+  border: 1px solid #297DF9;
   background: transparent;
   text-transform: uppercase;
   padding: 10px 24px;
@@ -66,8 +68,8 @@ export const SignUpButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #5B51FF;
-    transition: .6s;
+    background-color: #297DF9;
+    transition: 0.6s;
   }
 
   &::after {
