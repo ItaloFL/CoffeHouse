@@ -8,12 +8,12 @@ export class CreateUserController {
     const createUserUseCase = new CreateUserUseCase()
 
     const user = await createUserUseCase.execute({
-      name, 
+      name,
       email,
       telefone,
       password
     })
-    
-    return user;
+
+    return user
   }
 }
