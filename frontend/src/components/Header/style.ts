@@ -29,13 +29,18 @@ export const MenuItens = styled.ul`
   display: flex;
   gap: 2.8125rem;
   padding: 0.5rem;
-  cursor: pointer;
 
-  li:hover {
+  li a {
+    color: #a6aaad;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  li a:hover {
     color: #ffffff;
   }
 
-  li::after {
+  li a::after {
     content: '';
   }
 `
@@ -60,7 +65,7 @@ export const SignInButton = styled.button`
 export const SignUpButton = styled.button`
   font-size: 0.75rem;
   color: #ffffff;
-  border: 1px solid #297DF9;
+  border: 1px solid #297df9;
   background: transparent;
   text-transform: uppercase;
   padding: 10px 24px;
@@ -68,7 +73,7 @@ export const SignUpButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #297DF9;
+    background-color: #297df9;
     transition: 0.6s;
   }
 

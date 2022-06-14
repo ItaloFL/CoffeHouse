@@ -18,9 +18,15 @@ export function Header() {
 
           <MenuWrapper>
             <MenuItens>
-              <li>Home</li>
-              <li>Cafés</li>
-              <li>Contato</li>
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li>
+                <a href="">Cafés</a>
+              </li>
+              <li>
+                <a href="">Contato</a>
+              </li>
             </MenuItens>
           </MenuWrapper>
 

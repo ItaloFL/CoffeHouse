@@ -21,15 +21,25 @@ export function Footer() {
 
         <ul>
           <ListTitle>Cafés</ListTitle>
-          <ListItem>Tradicional</ListItem>
-          <ListItem>Gourmet</ListItem>
-          <ListItem>Extra Forte</ListItem>
+          <ListItem>
+            <a href="">Cafés</a>
+          </ListItem>
+          <ListItem>
+            <a href="">Gourmet</a>
+          </ListItem>
+          <ListItem>
+            <a href="">Extra Forte</a>
+          </ListItem>
         </ul>
 
         <ul>
           <ListTitle>CoffeHouse</ListTitle>
-          <ListItem>Sobre nós</ListItem>
-          <ListItem>Tipos de café</ListItem>
+          <ListItem>
+            <a href="">Sobre nós</a>
+          </ListItem>
+          <ListItem>
+            <a href="">Tipos de café</a>
+          </ListItem>
         </ul>
 
         <ul>

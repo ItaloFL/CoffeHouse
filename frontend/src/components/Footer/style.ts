@@ -1,7 +1,5 @@
-import styled from "styled-components";
-import { Container } from "../../styles/layout/Container";
-
-
+import styled from 'styled-components'
+import { Container } from '../../styles/layout/Container'
 
 export const FooterWrapper = styled.div`
   background-color: #27272a;
@@ -13,9 +11,7 @@ export const FooterContent = styled(Container)`
   gap: 7.5rem;
 `
 
-export const CoffeLogo = styled.div`
-  
-`
+export const CoffeLogo = styled.div``
 
 export const ListTitle = styled.p`
   font-size: 1.25rem;
@@ -25,17 +21,22 @@ export const ListTitle = styled.p`
 `
 
 export const ListItem = styled.li`
-  font-size: 0.875rem;
-  color: #A6AAAD;
-  margin-bottom: 15px;
-  cursor: pointer;
 
-  &:hover {
-    color: #FFFFFF;
+  margin-bottom: 15px;
+  
+  a {
+    font-size: 0.875rem;
+    color: #a6aaad;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      color: #ffffff;
+    }
   }
 `
 
 export const LogoText = styled.p`
-  color: #A6AAAD;
+  color: #a6aaad;
   font-size: 0.875rem;
 `
