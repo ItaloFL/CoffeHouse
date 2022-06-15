@@ -23,6 +23,40 @@ export const MenuWrapper = styled(Container)`
 export const HeaderButton = styled.nav`
   display: flex;
   gap: 4.375rem;
+
+  .signup {
+    background: transparent;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .signin {
+    font-size: 0.75rem;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #297df9;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #297df9;
+      transition: 0.6s;
+    }
+
+    &::after {
+      content: '';
+      background: url(${User});
+      height: 12px;
+      height: 12px;
+    }
+  }
 `
 
 export const MenuItens = styled.ul`
@@ -45,42 +79,9 @@ export const MenuItens = styled.ul`
   }
 `
 
-export const SignInButton = styled.button`
-  font-size: 0.75rem;
-  color: #ffffff;
-  background: transparent;
-  text-transform: uppercase;
-  padding: 10px 24px;
-  cursor: pointer;
-
-  &::before {
-    content: '';
-    display: inline-block;
-    background: url(${User}) no-repeat center;
-    height: 12px;
-    height: 12px;
-  }
-`
-
 export const SignUpButton = styled.button`
-  font-size: 0.75rem;
-  color: #ffffff;
-  border: 1px solid #297df9;
-  background: transparent;
-  text-transform: uppercase;
-  padding: 10px 24px;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #297df9;
-    transition: 0.6s;
-  }
-
-  &::after {
-    content: '';
-    background: url(${User});
-    height: 12px;
-    height: 12px;
+  .signup {
   }
 `
+
+export const SignInButton = styled.button``

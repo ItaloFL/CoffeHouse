@@ -1,4 +1,3 @@
-import LogoImage from '../../assets/logo.svg'
 import {
   HeaderButton,
   HeaderContent,
@@ -8,13 +7,19 @@ import {
   SignInButton,
   SignUpButton
 } from './style'
+import LogoImage from '../../assets/logo.svg'
+import { Link } from 'react-router-dom'
 
 export function Header() {
   return (
     <>
       <HeaderWrapper>
         <HeaderContent>
-          <img src={LogoImage} alt="" />
+          <Link to="/">
+            <a href="">
+              <img src={LogoImage} alt="" />
+            </a>
+          </Link>
 
           <MenuWrapper>
             <MenuItens>
@@ -31,9 +36,13 @@ export function Header() {
           </MenuWrapper>
 
           <HeaderButton>
-            <SignInButton>Entrar</SignInButton>
+            <Link className="signup" to="signup">
+              Entrar
+            </Link>
 
-            <SignUpButton>Criar Conta</SignUpButton>
+            <Link className="signin" to="signin">
+              Criar Conta
+            </Link>
           </HeaderButton>
         </HeaderContent>
       </HeaderWrapper>
