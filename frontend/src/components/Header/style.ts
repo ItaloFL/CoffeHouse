@@ -24,7 +24,7 @@ export const HeaderButton = styled.nav`
   display: flex;
   gap: 4.375rem;
 
-  .signup {
+  .signin {
     background: transparent;
     text-transform: uppercase;
     padding: 10px 24px;
@@ -34,7 +34,7 @@ export const HeaderButton = styled.nav`
     text-decoration: none;
   }
 
-  .signin {
+  .signup {
     font-size: 0.75rem;
     color: #ffffff;
     text-decoration: none;
@@ -46,6 +46,11 @@ export const HeaderButton = styled.nav`
     cursor: pointer;
 
     &:hover {
+      background-color: #297df9;
+      transition: 0.6s;
+    }
+
+    &:focus {
       background-color: #297df9;
       transition: 0.6s;
     }
@@ -70,7 +75,8 @@ export const MenuItens = styled.ul`
     cursor: pointer;
   }
 
-  li a:hover {
+  li a:hover,
+  li a:focus {
     color: #ffffff;
   }
 

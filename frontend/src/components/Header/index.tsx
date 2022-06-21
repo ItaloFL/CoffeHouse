@@ -36,11 +36,11 @@ export function Header() {
           </MenuWrapper>
 
           <HeaderButton>
-            <Link className="signup" to="signup">
+            <Link className="signin" to="signin">
               Entrar
             </Link>
 
-            <Link className="signin" to="signin">
+            <Link className="signup" to="signup">
               Criar Conta
             </Link>
           </HeaderButton>
