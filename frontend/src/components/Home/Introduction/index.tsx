@@ -17,7 +17,7 @@ export function Introduction() {
           selecionados do Brasil.
         </IntroDescription>
 
-        <Button text='venha conosco'/>
+        <Button text='venha conosco' margin='0 auto'/>
       </IntroContent>
     </>
   )
