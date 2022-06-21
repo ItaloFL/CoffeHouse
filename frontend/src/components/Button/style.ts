@@ -9,6 +9,5 @@ export const ButtonStyle = styled.button`
   background: linear-gradient(#5391ED, #154C9C);
   cursor: pointer;
   text-transform: uppercase;
-  margin: 0 auto;
   border-radius: 4px;
 `
