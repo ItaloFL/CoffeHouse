@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Container } from '../../styles/layout/Container'
+import ArrowIcon from '../../assets/left-arrow.svg'
 
 export const SignUpWrapper = styled(Container)`
   display: grid;
@@ -23,8 +24,29 @@ export const TextCoffe = styled.p`
   font-weight: medium;
   font-size: 1rem;
   color: #A6AAAD;
-  margin-left: 102px;
+  margin-left: 210px;
+  margin-bottom: 40px;
   max-width: 197px;
 `
 
-export const SignUpLink = styled.p``
+export const SignUpLink = styled.p`
+  font-family: var(--type-second);
+  color: #FFFFFF;
+  margin-left: 210px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  ::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 7px;
+    background: url(${ArrowIcon}) no-repeat center center;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #297DF9;
+  }
+`

@@ -25,7 +25,7 @@ export function SignUp(){
           <TextCoffe>Junte-se a nós e confira os melhores cafés</TextCoffe>
           <SignUpLink>
             Já tem conta?
-            <Link  to="SignUp">Ir Para Login</Link>
+            <Link  to="/signin" className="link">Ir Para Login</Link>
           </SignUpLink>
         </TextSignUp>
       </SignUpWrapper>
