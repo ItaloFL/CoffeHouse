@@ -32,6 +32,7 @@ export const HeaderButton = styled.nav`
     font-size: 0.75rem;
     color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
   }
 
   .signup {
@@ -44,6 +45,7 @@ export const HeaderButton = styled.nav`
     padding: 10px 24px;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
 
     &:hover {
       background-color: #297df9;
