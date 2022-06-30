@@ -50,3 +50,25 @@ export const SignUpLink = styled.p`
     color: #297DF9;
   }
 `
+
+export const InputItem = styled.div`
+  display: flex;
+`
+
+export const InputDiv = styled.div`
+  display: flex;
+  position: relative;
+  align-items: center;
+  
+  .icon {
+    position: absolute;
+    left: 10px;
+  }
+`
+
+export const SignUpInputs = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`
+
