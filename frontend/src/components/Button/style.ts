@@ -9,7 +9,7 @@ export const ButtonStyle = styled.button`
   text-transform: uppercase;
   border-radius: 4px;
 
-  :hover {
-    background: linear-gradient(#0861E5, #003E98);
+  :hover, :focus {
+    background: linear-gradient(#71AAFF, #1354B4);
   }
 `
