@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
 
   button, input {
     display: block;
-    border: none;
+    outline: none;
   }
 
   .container {
