@@ -17,10 +17,16 @@ export const SignInText = styled.p`
 `
 
 export const FormWrapper = styled.form`
-  display: block;
-  height: 400;
-  width: 378;
+  height: 400px;
+  width: 378px;
   background-color: #1c1c1c;
+  padding: 60px 50px;
+`
+
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 `
 
 export const SignUpText = styled.p``
