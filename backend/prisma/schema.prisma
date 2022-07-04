@@ -17,4 +17,17 @@ model User {
   telefone   String
   password   String
   created_at DateTime @default(now())
+
+  @@map("users")
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String
+  price       String
+  image       String
+  created_at  DateTime @default(now())
+
+  @@map("products")
 }
