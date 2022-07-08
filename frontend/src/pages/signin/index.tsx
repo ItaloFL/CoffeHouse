@@ -1,9 +1,9 @@
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
-import { FormWrapper, InputWrapper, SignInText, SignInWrapper, SignUpText } from './style'
+import { FormWrapper, InputDiv, InputWrapper, SignInText, SignInWrapper, SignUpText } from './style'
 import { Link } from 'react-router-dom'
 import { Envelope, LockSimple } from 'phosphor-react'
-import { InputDiv, InputItem } from '../signup/style'
+import { InputItem } from '../signup/style'
 
 export function SignIn() {
   return (
@@ -14,31 +14,29 @@ export function SignIn() {
           <InputWrapper>
             <InputItem>
               <InputDiv>
-                <Envelope size={12} weight="fill" />
+                <Envelope className="icon" size={19} weight="fill" color="#297DF9" />
                 <Input
                   name="email"
                   type="email"
                   placeholder="Seu E-mail"
-                  value=""
                 />
               </InputDiv>
             </InputItem>
-            <InputDiv>
-              <InputItem>
-                <LockSimple size={12} weight="fill" />
+            <InputItem>
+              <InputDiv>
+                <LockSimple className="icon" size={19} weight="fill" color="#297DF9" />
                 <Input
                   name="password"
                   type="password"
                   placeholder="Sua Senha"
-                  value=""
                 />
-              </InputItem>
-            </InputDiv>
+              </InputDiv>
+            </InputItem>
           </InputWrapper>
           <Button text="Entrar" margin="15px 0" />
           <SignUpText>
             Não tem conta?
-            <Link to="/signup">Registre-se</Link>
+            <Link to="/signup" className="link">Registre-se</Link>
           </SignUpText>
         </FormWrapper>
       </SignInWrapper>

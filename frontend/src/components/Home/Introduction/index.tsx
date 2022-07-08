@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Button } from '../../Button'
 import { Title } from '../../Title'
 import { IntroContent, IntroDescription } from './style'
@@ -17,7 +18,7 @@ export function Introduction() {
           selecionados do Brasil.
         </IntroDescription>
 
-        <Button text='venha conosco' margin='0 auto'/>
+        <Link className='LinkButton' to="signup">Venha conosco</Link>
       </IntroContent>
     </>
   )

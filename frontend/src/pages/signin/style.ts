@@ -29,4 +29,26 @@ export const InputWrapper = styled.div`
   gap: 15px;
 `
 
-export const SignUpText = styled.p``
+export const SignUpText = styled.p`
+  font-family: var(--type-second);
+  display: flex;
+  gap: 7px;
+  color: #FFFFFF;
+
+  .link {
+    text-decoration: none;
+    color: #297DF9;
+  }
+`
+
+export const InputDiv = styled.div`
+  display: flex;
+  position: relative;
+  align-items: center;
+  
+  .icon {
+    position: absolute;
+    left: 10px;
+  }
+`
+
