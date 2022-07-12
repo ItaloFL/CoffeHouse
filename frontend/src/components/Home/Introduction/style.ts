@@ -29,7 +29,7 @@ export const IntroDescription = styled.p`
   font-family: var(--type-second);
   font-size: 1.125rem;
   color: #a6aaad;
-  max-width: 350px;
+  max-width: 450px;
   margin: 40px auto;
   line-height: 1.2;
 `
