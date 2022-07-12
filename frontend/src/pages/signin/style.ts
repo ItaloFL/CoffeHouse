@@ -1,5 +1,17 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Container } from '../../styles/layout/Container'
+
+export const FadeRightAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
 
 export const SignInWrapper = styled(Container)`
   display: grid;
@@ -8,6 +20,8 @@ export const SignInWrapper = styled(Container)`
   grid-template-columns: 378px 1fr;
   align-items: center;
   justify-content: center;
+  animation: ${FadeRightAnimation} .6s forwards ease;
+
 `
 
 export const SignInText = styled.p`
