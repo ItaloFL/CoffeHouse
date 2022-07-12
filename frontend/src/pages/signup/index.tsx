@@ -1,4 +1,12 @@
-import { Envelope, LockSimple, Phone, User } from 'phosphor-react'
+import {
+  Envelope,
+  LockSimple,
+  Phone,
+  User,
+  Eye,
+  EyeSlash
+} from 'phosphor-react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
@@ -7,6 +15,7 @@ import {
   FormSignUp,
   InputDiv,
   InputItem,
+  PasswordDiv,
   SignUpInputs,
   SignUpLink,
   SignUpWrapper,
@@ -15,6 +24,17 @@ import {
 } from './style'
 
 export function SignUp() {
+  const [visiblePassword, setVisiblePassword] = useState(false)
+  const [confirmVisiblePassword, setconfirmVisiblePassword] = useState(false)
+
+  function toggleVisiblePassword() {
+    setVisiblePassword(!visiblePassword)
+  }
+
+  function toggleConfirmPassword() {
+    setconfirmVisiblePassword(!confirmVisiblePassword)
+  }
+
   return (
     <>
       <SignUpWrapper>
@@ -62,11 +82,23 @@ export function SignUp() {
                   weight="fill"
                   color="#297DF9"
                 />
-                <Input
-                  name="password"
-                  type="password"
-                  placeholder="Sua Senha"
-                />
+                <PasswordDiv>
+                  <Input
+                    name="password"
+                    type={visiblePassword ? 'text' : 'password'}
+                    placeholder="Sua Senha"
+                  />
+                  <button
+                    className="button-eye"
+                    onClick={toggleVisiblePassword}
+                  >
+                    {visiblePassword ? (
+                      <EyeSlash size={19} weight="fill" color="#144EA5" />
+                    ) : (
+                      <Eye size={19} weight="fill" color="#297DF9" />
+                    )}
+                  </button>
+                </PasswordDiv>
               </InputDiv>
             </InputItem>
             <InputItem>
@@ -77,14 +109,26 @@ export function SignUp() {
                   weight="fill"
                   color="#297DF9"
                 />
-                <Input
-                  name="password"
-                  type="password"
-                  placeholder="Confirme sua senha"
-                />
+                <PasswordDiv>
+                  <Input
+                    name="password"
+                    type={confirmVisiblePassword ? 'text' : 'password'}
+                    placeholder="Confirme sua senha"
+                  />
+                  <button
+                    className="button-eye"
+                    onClick={toggleConfirmPassword}
+                  >
+                    {confirmVisiblePassword ? (
+                      <EyeSlash size={19} weight="fill" color="#144EA5" />
+                    ) : (
+                      <Eye size={19} weight="fill" color="#297DF9" />
+                    )}
+                  </button>
+                </PasswordDiv>
               </InputDiv>
             </InputItem>
-            <Button text="Cadastrar" margin="35px -10px" />
+            <Button text="Cadastrar" margin="15px -8px" />
           </SignUpInputs>
         </FormSignUp>
         <TextSignUp>
