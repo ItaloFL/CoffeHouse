@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #121212;
+    background-color: ${props => props.theme.colors.background};
     font-family: var(--type-frist);
   }
 
