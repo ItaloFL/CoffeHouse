@@ -20,21 +20,21 @@ export const SignInWrapper = styled(Container)`
   grid-template-columns: 378px 1fr;
   align-items: center;
   justify-content: center;
-  animation: ${FadeRightAnimation} .6s forwards ease;
-
+  animation: ${FadeRightAnimation} 0.6s forwards ease;
 `
 
 export const SignInText = styled.p`
   font-size: 3rem;
   font-weight: bold;
-  color: #ffffff;
+  color: ${props => props.theme.colors.primaryTextColor};
 `
 
 export const FormWrapper = styled.form`
   height: 400px;
   width: 378px;
-  background-color: #1c1c1c;
+  background-color: ${props => props.theme.colors.formBackgroudColor};
   padding: 60px 50px;
+  border-radius: 4px;
 `
 
 export const InputWrapper = styled.div`
@@ -47,11 +47,11 @@ export const SignUpText = styled.p`
   font-family: var(--type-second);
   display: flex;
   gap: 7px;
-  color: #FFFFFF;
+  color: #ffffff;
 
   .link {
     text-decoration: none;
-    color: #297DF9;
+    color: #297df9;
   }
 `
 
@@ -59,10 +59,9 @@ export const InputDiv = styled.div`
   display: flex;
   position: relative;
   align-items: center;
-  
+
   .icon {
     position: absolute;
     left: 10px;
   }
 `
-

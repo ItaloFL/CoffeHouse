@@ -25,9 +25,10 @@ export const SignUpWrapper = styled(Container)`
 `
 
 export const FormSignUp = styled.div`
-  background-color: #1c1c1c;
+  background-color: ${props => props.theme.colors.formBackgroudColor};
   height: 523px;
   padding: 40px 50px;
+  border-radius: 4px;
 `
 
 export const TextSignUp = styled.div``
@@ -36,7 +37,7 @@ export const TextCoffe = styled.p`
   font-family: var(--type-second);
   font-weight: medium;
   font-size: 1rem;
-  color: #a6aaad;
+  color: ${props => props.theme.colors.thirdColor};
   margin-left: 210px;
   margin-bottom: 40px;
   max-width: 197px;
@@ -44,7 +45,7 @@ export const TextCoffe = styled.p`
 
 export const SignUpLink = styled.p`
   font-family: var(--type-second);
-  color: #ffffff;
+  color: ${props => props.theme.colors.primaryTextColor};
   margin-left: 210px;
   display: flex;
   align-items: center;
