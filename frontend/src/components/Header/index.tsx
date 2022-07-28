@@ -4,11 +4,11 @@ import {
   HeaderWrapper,
   MenuItens,
   MenuWrapper,
-  SignInButton,
-  SignUpButton
+  ThemeButton
 } from './style'
 import LogoImage from '../../assets/logo.svg'
 import { Link } from 'react-router-dom'
+import { Sun } from 'phosphor-react'
 
 export function Header() {
   return (
@@ -44,6 +44,8 @@ export function Header() {
               Criar Conta
             </Link>
           </HeaderButton>
+
+          <Sun size={30} color="#0d0d0d" enableBackground={40} />
         </HeaderContent>
       </HeaderWrapper>
     </>

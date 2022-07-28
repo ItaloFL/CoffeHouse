@@ -3,7 +3,7 @@ import User from '../../assets/user.svg'
 import { Container } from '../../styles/layout/Container'
 
 export const HeaderWrapper = styled.div`
-  background-color: #27272a;
+  background-color: ${props => props.theme.colors.secondaryColor};
 `
 
 export const HeaderContent = styled(Container)`
@@ -30,14 +30,14 @@ export const HeaderButton = styled.nav`
     padding: 10px 24px;
     cursor: pointer;
     font-size: 0.75rem;
-    color: #ffffff;
+    color: ${props => props.theme.colors.primaryTextColor};
     text-decoration: none;
     font-weight: bold;
   }
 
   .signup {
     font-size: 0.75rem;
-    color: #ffffff;
+    color: ${props => props.theme.colors.primaryTextColor};
     text-decoration: none;
     border: 1px solid #297df9;
     background: transparent;
@@ -72,7 +72,7 @@ export const MenuItens = styled.ul`
   padding: 0.5rem;
 
   li a {
-    color: #a6aaad;
+    color: ${props => props.theme.colors.secondaryTextColor};
     text-decoration: none;
     cursor: pointer;
   }
@@ -93,3 +93,15 @@ export const SignUpButton = styled.button`
 `
 
 export const SignInButton = styled.button``
+
+export const ThemeButton = styled.button`
+  background: transparent;
+  outline: none;
+  margin-left: 60px;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: rgba(244, 244, 244);
+  }
+`
