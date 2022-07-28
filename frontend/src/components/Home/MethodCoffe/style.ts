@@ -13,9 +13,9 @@ export const MethodList = styled.ul`
 export const MethodItem = styled.li`
   width: 21.875rem;
   height: 18.5rem;
-  background-color: #161616;
+  background-color: ${props => props.theme.colors.cardColor};
   border: 1px solid;
-  border-color: rgba(72, 72, 72, 0.5);
+  border-color: ${props => props.theme.colors.borderColor};
   padding: 25px 25px 40px 25px;
   border-radius: 4px;
 `
@@ -25,7 +25,7 @@ export const ListIcon = styled.div`
 `
 export const ListCoffeTitle = styled.p`
   font-size: 1.25rem;
-  color: #ffffff;
+  color: ${props => props.theme.colors.primaryTextColor};
   font-weight: bold;
   margin-bottom: 15px;
   font-family: 'Roboto';
@@ -33,5 +33,5 @@ export const ListCoffeTitle = styled.p`
 
 export const ListDescription = styled.p`
   font-family: var(--type-second);
-  color: #a6aaad;
+  color: ${props => props.theme.colors.secondaryTextColor};
 `

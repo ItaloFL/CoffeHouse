@@ -8,7 +8,7 @@ export const IntroContent = styled.div`
     display: block;
     width: 290px;
     height: 55px;
-    color: #ffffff;
+    color: ${props => props.theme.colors.primaryTextColor};
     background: linear-gradient(#5391ed, #154c9c);
     cursor: pointer;
     text-transform: uppercase;
@@ -28,7 +28,7 @@ export const IntroContent = styled.div`
 export const IntroDescription = styled.p`
   font-family: var(--type-second);
   font-size: 1.125rem;
-  color: #a6aaad;
+  color: ${props => props.theme.colors.secondaryTextColor};
   max-width: 450px;
   margin: 40px auto;
   line-height: 1.2;
