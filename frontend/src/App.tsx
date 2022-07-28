@@ -6,8 +6,11 @@ import { SignUp } from './pages/signup'
 import { SignIn } from './pages/signin'
 import { light } from './styles/theme/light'
 import { dark } from './styles/theme/dark'
+import { useState } from 'react'
 
 export function App() {
+  const [theme, setTheme] = useState('light')
+
   return (
     <>
       <ThemeProvider theme={dark}>
