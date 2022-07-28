@@ -1,8 +1,9 @@
 export const light = {
   name: 'light',
   colors: {
-    background: '#EBEBEB',
+    background: '#E8E8E8',
     secondaryColor: '#E7E7E7',
+    thirdColor: '#71717A',
     cardColor: '#F4F4F5',
     primaryTextColor: '#27272A',
     secondaryTextColor: '#3A3A3D',

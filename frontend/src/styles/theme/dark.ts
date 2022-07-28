@@ -3,6 +3,7 @@ export const dark = {
   colors: {
     background: '#121212',
     secondaryColor: '#27272A',
+    thirdColor: '#FFFFFF',
     cardColor: '#161616',
     primaryTextColor: '#FFFFFF',
     secondaryTextColor: '#A6AAAD',
