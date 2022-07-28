@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Container } from '../../styles/layout/Container'
 
 export const FooterWrapper = styled.div`
-  background-color: #27272a;
+  background-color: ${props => props.theme.colors.secondaryColor};
   padding: 30px 0;
 `
 
@@ -15,7 +15,7 @@ export const CoffeLogo = styled.div``
 
 export const ListTitle = styled.p`
   font-size: 1.25rem;
-  color: #666666;
+  color: ${props => props.theme.colors.footerListTitleColor};
   margin-bottom: 5px;
   font-weight: bold;
 `
@@ -26,7 +26,7 @@ export const ListItem = styled.li`
   
   a {
     font-size: 0.875rem;
-    color: #a6aaad;
+    color: ${props => props.theme.colors.footerListColor};
     cursor: pointer;
     text-decoration: none;
 
@@ -37,6 +37,6 @@ export const ListItem = styled.li`
 `
 
 export const LogoText = styled.p`
-  color: #a6aaad;
+  color: ${props => props.theme.colors.secondaryColor};
   font-size: 0.875rem;
 `
