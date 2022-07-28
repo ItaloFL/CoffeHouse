@@ -4,13 +4,12 @@ export const InputWrapper = styled.div`
   .input {
     width: 278px;
     height: 45px;
-    background-color: #121212;
+    background-color: ${props => props.theme.colors.background};
     padding: 0px 40px;
     border-radius: 4px;
     outline: none;
-    border: 2px solid #121212;
-
-    color: #FFFFFF;
+    border: 2px solid transparent;
+    color: ${props => props.theme.colors.primaryTextColor};
 
     ::placeholder {
       font-family: var(--type-frist);
@@ -21,8 +20,8 @@ export const InputWrapper = styled.div`
     }
 
     :focus {
-      border-color: #297DF9;
-      transition: .3s;
+      border-color: #297df9;
+      transition: 0.3s;
     }
   }
 `

@@ -1,3 +1,5 @@
+import { TitleText } from './style'
+
 export type PropsTitle = {
   fontSize: string
   Text: string
@@ -5,5 +7,17 @@ export type PropsTitle = {
 }
 
 export function Title({ fontSize, Text, maxWidth }: PropsTitle) {
-  return <h1 style={{ fontSize, color: '#FFFFFF', maxWidth, margin: '0 auto', fontWeight: 'bold', marginBottom: '40px' }}>{Text}</h1>
+  return (
+    <TitleText
+      style={{
+        fontSize,
+        maxWidth,
+        margin: '0 auto',
+        fontWeight: 'bold',
+        marginBottom: '40px'
+      }}
+    >
+      {Text}
+    </TitleText>
+  )
 }
