@@ -6,7 +6,7 @@ import {
   Eye,
   EyeSlash
 } from 'phosphor-react'
-import { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
@@ -34,6 +34,14 @@ export function SignUp() {
   function toggleConfirmPassword() {
     setconfirmVisiblePassword(!confirmVisiblePassword)
   }
+
+  const HandleKeyUp = useCallback((e: React.FormEvent<HTMLInputElement>) => {
+    e.currentTarget.maxLength = 15
+    let value = e.currentTarget.value
+    value = value.replace(/\D/g, '')
+    value = value.replace(/^(\d{2})(\d{5})(\d)/, '($1) $2-$3')
+    e.currentTarget.value = value
+  }, [])
 
   return (
     <>
@@ -71,7 +79,12 @@ export function SignUp() {
                   weight="fill"
                   color="#297DF9"
                 />
-                <Input name="telefone" type="text" placeholder="Seu Telefone" />
+                <Input
+                  name="telefone"
+                  type="text"
+                  placeholder="Seu Telefone"
+                  onKeyUp={HandleKeyUp}
+                />
               </InputDiv>
             </InputItem>
             <InputItem>
