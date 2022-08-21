@@ -9,15 +9,20 @@ import { dark } from './styles/theme/dark'
 import { useState } from 'react'
 
 export function App() {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState(light)
+
+  const toggleTheme = () => {
+    setTheme(theme.name === 'light' ? dark : light)
+    console.log(theme);
+  }
 
   return (
     <>
-      <ThemeProvider theme={dark}>
+      <ThemeProvider theme={theme}>
         <BrowserRouter>
           <GlobalStyles />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home toggleTheme={toggleTheme} />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
           </Routes>

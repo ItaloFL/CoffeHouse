@@ -14,6 +14,7 @@ declare module 'styled-components' {
       footerListTitleColor: string
       footerListColor: string
       borderColor: string
+      themeHoverColor: string
     }
   }
 }
