@@ -4,12 +4,16 @@ import { Header } from '../Header'
 import { Introduction } from './Introduction'
 import { MethodCoffe } from './MethodCoffe'
 
-export function Home() {
+type Props = {
+  toggleTheme(): void
+}
+
+export function Home({ toggleTheme }: Props) {
   return (
     <>
-      <Header/>
+      <Header toggleTheme={toggleTheme}/>
       <Introduction />
-      <Coffe/>
+      <Coffe />
       <MethodCoffe />
       <Footer />
     </>
