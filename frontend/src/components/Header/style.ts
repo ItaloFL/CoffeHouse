@@ -23,6 +23,7 @@ export const MenuWrapper = styled(Container)`
 export const HeaderButton = styled.nav`
   display: flex;
   gap: 4.375rem;
+  align-items: center;
 
   .signin {
     background: transparent;
@@ -94,14 +95,19 @@ export const SignUpButton = styled.button`
 
 export const SignInButton = styled.button``
 
+export const ButtonEnter = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`
+
 export const ThemeButton = styled.button`
   background: transparent;
-  outline: none;
-  margin-left: 60px;
+  border: 1px solid #297df9;
+  padding: 3px;
   cursor: pointer;
-  border: none;
 
   &:hover {
-    background-color: rgba(244, 244, 244);
+    background-color: ${props => props.theme.colors.themeHoverColor};
   }
 `

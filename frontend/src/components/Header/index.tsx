@@ -1,4 +1,5 @@
 import {
+  ButtonEnter,
   HeaderButton,
   HeaderContent,
   HeaderWrapper,
@@ -8,9 +9,17 @@ import {
 } from './style'
 import LogoImage from '../../assets/logo.svg'
 import { Link } from 'react-router-dom'
-import { Sun } from 'phosphor-react'
+import { SunDim, User } from 'phosphor-react'
+import { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 
-export function Header() {
+type Props = {
+  toggleTheme(): void
+}
+
+export function Header({ toggleTheme }: Props) {
+  const { name } = useContext(ThemeContext)
+
   return (
     <>
       <HeaderWrapper>
@@ -37,15 +46,25 @@ export function Header() {
 
           <HeaderButton>
             <Link className="signin" to="signin">
-              Entrar
+              <ButtonEnter>
+                <User size={14} color="#297DF9" weight="fill" />
+                Entrar
+              </ButtonEnter>
             </Link>
 
             <Link className="signup" to="signup">
               Criar Conta
             </Link>
-          </HeaderButton>
 
-          <Sun size={30} color="#0d0d0d" enableBackground={40} />
+            <ThemeButton onClick={toggleTheme}>
+              <SunDim
+                size={24}
+                color="#297DF9"
+                weight="fill"
+                strokeLinecap="square"
+              />
+            </ThemeButton>
+          </HeaderButton>
         </HeaderContent>
       </HeaderWrapper>
     </>
