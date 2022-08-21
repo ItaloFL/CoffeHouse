@@ -10,6 +10,7 @@ export const light = {
     formBackgroudColor: '#F4F4F5',
     footerListTitleColor: '#27272A',
     footerListColor: '#71717A',
-    borderColor: '#D4D4D8'
+    borderColor: '#D4D4D8',
+    themeHoverColor: '#E4E4E4'
   }
 }
