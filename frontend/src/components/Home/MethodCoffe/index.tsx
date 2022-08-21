@@ -43,7 +43,7 @@ export function MethodCoffe() {
         />
         <MethodList>
           {typesCoffe.map(type => (
-            <MethodItem>
+            <MethodItem key={type.title}>
               <ListIcon>
                 <img src={type.icon} />
               </ListIcon>
