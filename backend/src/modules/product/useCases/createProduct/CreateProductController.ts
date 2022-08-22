@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+import { PrismaProductRepository } from '../../../../repositories/ProductRepositories/prisma/prismaProductRepository'
 import { CreateProductUseCase } from './CreateProductUseCase'
 
 export class CreateProductController {
@@ -6,9 +7,10 @@ export class CreateProductController {
     const { name, description, price } = request.body
     let image = request?.file?.filename
 
-    if(!image) throw new Error('Imagem faltando, verifique.')
+    if (!image) throw new Error('Imagem faltando, verifique.')
 
-    const createProductUseCase = new CreateProductUseCase()
+    const productRepository = new PrismaProductRepository()
+    const createProductUseCase = new CreateProductUseCase(productRepository)
 
     const product = createProductUseCase.execute({
       name,
