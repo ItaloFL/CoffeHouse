@@ -18,16 +18,12 @@ type Props = {
 }
 
 export function Header({ toggleTheme }: Props) {
-  const { name } = useContext(ThemeContext)
-
   return (
     <>
       <HeaderWrapper>
         <HeaderContent>
           <Link to="/">
-            <a href="">
-              <img src={LogoImage} alt="" />
-            </a>
+            <img src={LogoImage} alt="" />
           </Link>
 
           <MenuWrapper>
