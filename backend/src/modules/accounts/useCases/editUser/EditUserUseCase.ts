@@ -1,10 +1,23 @@
+import { UserRepository } from '../../../../repositories/UserRepositories/userRepository'
+
 export type EditUserRequest = {
+  id: string
   name: string
   telefone: string
 }
 
 export class EditUserUseCase {
-  async execute({ name, telefone }: EditUserRequest) {
-    
+
+  constructor(private userRepository: UserRepository){}
+
+  async execute({ id, name, telefone }: EditUserRequest) {
+
+    const verifyIfUserExist = await this.userRepository.findUserById(id)
+
+    if(!verifyIfUserExist) throw new Error('Esse usuário não existe.')
+
+    const user = await this.userRepository.update(id, name, telefone)
+
+    return user;
   }
 }
