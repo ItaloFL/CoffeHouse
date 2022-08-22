@@ -1,6 +1,7 @@
 import { compare } from 'bcryptjs'
 import { client } from '../../../../database/Prisma/client'
 import { sign } from 'jsonwebtoken'
+import { UserRepository } from '../../../../repositories/UserRepositories/userRepository'
 
 export type AuthenticateUser = {
   email: string
@@ -8,12 +9,10 @@ export type AuthenticateUser = {
 }
 
 export class AuthenticateUserUseCase {
+  constructor(private userRepository: UserRepository) {}
+
   async execute({ email, password }: AuthenticateUser) {
-    const verifyIfUserExist = await client.user.findFirst({
-      where: {
-        email
-      }
-    })
+    const verifyIfUserExist = await this.userRepository.findUserByEmail(email)
 
     if (!verifyIfUserExist) throw new Error('Usuário ou senha incorretos')
 
