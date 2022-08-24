@@ -7,6 +7,7 @@ export const light = {
     cardColor: '#F4F4F5',
     primaryTextColor: '#27272A',
     secondaryTextColor: '#3A3A3D',
+    secondaryTextState: '#71717A',
     formBackgroudColor: '#F4F4F5',
     footerListTitleColor: '#27272A',
     footerListColor: '#71717A',

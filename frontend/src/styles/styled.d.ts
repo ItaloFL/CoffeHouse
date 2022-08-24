@@ -10,6 +10,7 @@ declare module 'styled-components' {
       cardColor: string
       primaryTextColor: string
       secondaryTextColor: string
+      secondaryTextState: string,
       formBackgroudColor: string
       footerListTitleColor: string
       footerListColor: string

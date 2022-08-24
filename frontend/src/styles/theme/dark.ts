@@ -7,6 +7,7 @@ export const dark = {
     cardColor: '#161616',
     primaryTextColor: '#FFFFFF',
     secondaryTextColor: '#A6AAAD',
+    secondaryTextState: '#A6AAAD',
     formBackgroudColor: '#1C1C1C',
     footerListTitleColor: '#666666',
     footerListColor: '#A6AAAD',
