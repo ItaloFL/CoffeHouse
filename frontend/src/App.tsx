@@ -6,14 +6,13 @@ import { SignUp } from './pages/signup'
 import { SignIn } from './pages/signin'
 import { light } from './styles/theme/light'
 import { dark } from './styles/theme/dark'
-import { useState } from 'react'
+import usePersistedTheme from './utils/usePersistedTheme'
 
 export function App() {
-  const [theme, setTheme] = useState(light)
+  const [theme, setTheme] = usePersistedTheme('theme', light)
 
   const toggleTheme = () => {
     setTheme(theme.name === 'light' ? dark : light)
-    console.log(theme);
   }
 
   return (
