@@ -15,7 +15,7 @@ export const CoffeItem = styled.button`
   cursor: pointer;
 
   p {
-    color: white;
+    color: ${props => props.theme.colors.primaryTextColor};
     font-family: var(--type-second);
     font-weight: medium;
     font-size: 1.25rem;
