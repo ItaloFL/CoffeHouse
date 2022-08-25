@@ -12,5 +12,5 @@ export interface ProductRepository {
 
   update({ name, description, price, image }: ProductType): Promise<Product>
 
-  findProductByName(name: string): Promise<Product | null>
+  findProductByName(name: string): Promise<Product | undefined>
 }
