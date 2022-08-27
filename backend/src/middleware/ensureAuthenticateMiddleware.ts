@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
 import { verify } from 'jsonwebtoken'
+import { AppError } from '../errors/AppError/AppError'
 
 type PayLoad = {
   sub: string
@@ -12,7 +13,7 @@ export function ensureAuthenticateMiddleware(
 ) {
   const authHeader = request.headers.authorization
 
-  if (!authHeader) throw new Error('Token is missing')
+  if (!authHeader) throw new AppError('Token is missing')
 
   const [, token] = authHeader.split(' ')
 
@@ -28,6 +29,6 @@ export function ensureAuthenticateMiddleware(
 
     next()
   } catch {
-    throw new Error('Token invalido')
+    throw new AppError('Token invalido')
   }
 }
