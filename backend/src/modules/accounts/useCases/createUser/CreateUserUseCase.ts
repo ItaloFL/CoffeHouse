@@ -1,6 +1,6 @@
-import { client } from '../../../../database/Prisma/client'
 import { hash } from 'bcryptjs'
 import { UserRepository } from '../../../../repositories/UserRepositories/userRepository'
+import { AppError } from '../../../../errors/AppError/AppError'
 
 export type UserType = {
   name: string
@@ -15,7 +15,7 @@ export class CreateUserUseCase {
   async execute({ name, email, telefone, password }: UserType) {
     const user = await this.userRepository.findUserByEmail(email)
 
-    if (user) throw new Error('Já existe um usuário cadastrado com esse Email.')
+    if (user) throw new AppError('Já existe um usuário cadastrado com esse Email.')
 
     const hashPassword = await hash(password, 8)
 
@@ -23,7 +23,7 @@ export class CreateUserUseCase {
       name,
       email,
       telefone,
-      password
+      password: hashPassword
     })
 
     return createdUser

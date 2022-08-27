@@ -16,6 +16,6 @@ export class CreateUserController {
       password
     })
 
-    return user
+    return response.json(user)
   }
 }
