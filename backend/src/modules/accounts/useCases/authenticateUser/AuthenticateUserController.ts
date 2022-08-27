@@ -9,11 +9,13 @@ export class AuthenticateUserController {
     const userRepository = new PrismaUserRepository()
     const authenticateUserUseCase = new AuthenticateUserUseCase(userRepository)
 
-    const user = await authenticateUserUseCase.execute({
+    const token = await authenticateUserUseCase.execute({
       email,
       password
     })
 
-    return response.json(user)
+    return response.json({
+      token
+    })
   }
 }
