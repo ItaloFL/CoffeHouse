@@ -1,4 +1,5 @@
 import { client } from '../../../../database/Prisma/client'
+import { AppError } from '../../../../errors/AppError/AppError'
 import { ProductRepository } from '../../../../repositories/ProductRepositories/productRepository'
 
 export type ProductType = {
@@ -16,7 +17,7 @@ export class CreateProductUseCase {
       name
     )
 
-    if (verifyIfProductExist) throw new Error('Produto já cadastrado!')
+    if (verifyIfProductExist) throw new AppError('Produto já cadastrado!')
 
     const product = await this.productRepository.create({
       name,
