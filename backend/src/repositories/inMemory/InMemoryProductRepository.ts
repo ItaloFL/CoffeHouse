@@ -3,9 +3,11 @@ import {
   ProductRepository,
   ProductType
 } from '../ProductRepositories/productRepository'
+import { v4 } from 'uuid'
+import { AppError } from '../../errors/AppError/AppError'
 
 export class InMemoryProductRepository implements ProductRepository {
-  private products: Product[] = []
+  products: Product[] = []
 
   async create({
     name,
@@ -16,11 +18,14 @@ export class InMemoryProductRepository implements ProductRepository {
     const product = {} as Product
 
     Object.assign(product, {
+      id: product.id ?? v4(),
       name,
       description,
       price,
       image
     })
+
+    this.products.push(product)
 
     return product
   }
@@ -34,7 +39,7 @@ export class InMemoryProductRepository implements ProductRepository {
     const product = await this.findProductByName(name)
 
     if (!product) {
-      throw new Error('Produto não encontrado')
+      throw new AppError('Produto não encontrado')
     }
 
     product.name = name ?? product.name
@@ -45,9 +50,9 @@ export class InMemoryProductRepository implements ProductRepository {
     return product
   }
 
-  async findProductByName(name: string): Promise<Product | undefined> {
+  async findProductByName(name: string): Promise<Product | null> {
     const product = this.products.find(product => product.name === name)
 
-    return product
+    return product ?? null
   }
 }
