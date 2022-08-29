@@ -12,6 +12,7 @@ export const dark = {
     footerListTitleColor: '#666666',
     footerListColor: '#A6AAAD',
     borderColor: 'rgba(72, 72, 72, 0.5)',
-    themeHoverColor: '#39393C'
+    themeHoverColor: '#39393C',
+    logoColor: '#FFFFFF'
   }
 }

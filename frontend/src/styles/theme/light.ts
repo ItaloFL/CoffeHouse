@@ -1,7 +1,7 @@
 export const light = {
   name: 'light',
   colors: {
-    background: '#E8E8E8',
+    background: '#EBEBEB',
     secondaryColor: '#E7E7E7',
     thirdColor: '#71717A',
     cardColor: '#F4F4F5',
@@ -12,6 +12,7 @@ export const light = {
     footerListTitleColor: '#27272A',
     footerListColor: '#71717A',
     borderColor: '#D4D4D8',
-    themeHoverColor: '#E4E4E4'
+    themeHoverColor: '#E4E4E4',
+    logoColor: '#181818'
   }
 }
