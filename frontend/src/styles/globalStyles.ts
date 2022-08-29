@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -30,4 +30,8 @@ export const GlobalStyles = createGlobalStyle`
   .container {
     max-width: 70rem;
   }
+`
+
+export const Logo = styled.svg`
+  color: ${props => props.theme.colors.logoColor};
 `
