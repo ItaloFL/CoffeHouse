@@ -37,6 +37,7 @@ export const ListItem = styled.li`
 `
 
 export const LogoText = styled.p`
-  color: ${props => props.theme.colors.secondaryColor};
+  color: ${props => props.theme.colors.secondaryTextColor};
   font-size: 0.875rem;
+  margin-top: 10px;
 `
