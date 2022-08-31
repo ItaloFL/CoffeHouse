@@ -9,6 +9,8 @@ import {
   LogoText
 } from './style'
 import { Logo } from '../../styles/globalStyles'
+import { Link } from 'react-router-dom'
+
 
 export function Footer() {
   return (
@@ -37,7 +39,7 @@ export function Footer() {
         <ul>
           <ListTitle>Cafés</ListTitle>
           <ListItem>
-            <a href="">Cafés</a>
+            <Link to="tradicional">Tradicional</Link>
           </ListItem>
           <ListItem>
             <a href="">Gourmet</a>
