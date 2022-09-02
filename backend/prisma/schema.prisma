@@ -11,12 +11,13 @@ datasource db {
 }
 
 model User {
-  id         String   @id @default(uuid())
+  id         String       @id @default(uuid())
   name       String
-  email      String   @unique
+  email      String       @unique
   telefone   String
   password   String
-  created_at DateTime @default(now())
+  created_at DateTime     @default(now())
+  Depoimento Depoimento[]
 
   @@map("users")
 }
@@ -30,4 +31,12 @@ model Product {
   created_at  DateTime @default(now())
 
   @@map("products")
+}
+
+model Depoimento {
+  id         String   @id @default(uuid())
+  name       User     @relation(fields: [user], references: [id])
+  user       String
+  depoimento String
+  created_at DateTime @default(now())
 }
