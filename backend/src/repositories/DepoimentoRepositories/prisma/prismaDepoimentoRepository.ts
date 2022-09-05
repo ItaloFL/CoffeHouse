@@ -19,4 +19,14 @@ export class prismaDepoimentoRepository implements DepoimentoRepository {
 
     return Depoimento
   }
+
+  async findDepoiment(depoimento: string): Promise<Depoimento | null> {
+    const depoiment = await client.depoimento.findFirst({
+      where: {
+        depoimento
+      }
+    })
+
+    return depoiment
+  }
 }
