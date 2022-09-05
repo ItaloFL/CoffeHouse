@@ -102,3 +102,23 @@ export const ProcessDescription = styled.p`
   color: ${props => props.theme.colors.secondaryTextColor};
 `
 
+export const StatsList = styled.ul`
+  display: flex;
+  gap: 60px;
+`
+
+export const StatsItem = styled.li`
+  
+`
+
+export const StatsTitle = styled.h1`
+  font-size: 3rem;
+  color: ${props => props.theme.colors.primaryTextColor};
+  font-weight: bold;
+  margin-bottom: 7px;
+`
+
+export const StatsDescription = styled.p`
+  font-family: var(--type-second);
+  color: ${props => props.theme.colors.secondaryTextColor};
+`

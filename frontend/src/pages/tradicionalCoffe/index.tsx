@@ -26,6 +26,10 @@ import {
   ProcessItem,
   ProcessList,
   ProcessTitle,
+  StatsDescription,
+  StatsItem,
+  StatsList,
+  StatsTitle,
   TitleCoffe,
   TradicionalCoffeWrapper
 } from './style'
@@ -184,6 +188,21 @@ export function TradicionalCoffe({ toggleTheme }: Props) {
             </ProcessDescription>
           </ProcessItem>
         </ProcessList>
+
+        <StatsList>
+          <StatsItem>
+            <StatsTitle>20k+</StatsTitle>
+            <StatsDescription>Sacas por mês</StatsDescription>
+          </StatsItem>
+          <StatsItem>
+            <StatsTitle>400 +</StatsTitle>
+            <StatsDescription>Funcionários</StatsDescription>
+          </StatsItem>
+          <StatsItem>
+            <StatsTitle>20+</StatsTitle>
+            <StatsDescription>Plantios de café</StatsDescription>
+          </StatsItem>
+        </StatsList>
       </TradicionalCoffeWrapper>
     </>
   )
