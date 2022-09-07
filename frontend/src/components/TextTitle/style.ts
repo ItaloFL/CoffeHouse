@@ -7,5 +7,5 @@ export const TitleText = styled.p`
   font-weight: bold;
   margin-bottom: 1.25rem;
   text-transform: uppercase;
-  color: #7CAAEF;
+  color: ${props => props.theme.colors.detailTitleColor};
 `
