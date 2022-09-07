@@ -40,8 +40,8 @@ export const ButtonDescription = styled.button`
   margin-top: 25px;
   width: 155px;
   height: 46px;
-  background-color: #7caaef;
-  color: #041d1f;
+  background-color: ${props => props.theme.colors.detailTitleColor};
+  color: ${props => props.theme.colors.primaryTextColor};
   text-transform: uppercase;
   padding: 15px 12px;
   font-size: 12px;
@@ -62,8 +62,8 @@ export const DepoimentoWrapper = styled.div`
 export const DepoimentoItem = styled.div`
   width: 365px;
   height: 172px;
-  background-color: #1E1E1E;
-  color: #F1EEEE;
+  background-color: ${props => props.theme.colors.cardColor};
+  color: ${props => props.theme.colors.primaryTextColor};
   padding: 30px;
   font-size: 14px;
 `
@@ -75,7 +75,7 @@ export const DepoimentoAuthor = styled.div`
 export const Detail = styled.div`
   width: 50px;
   height: 1px;
-  background-color: rgba(217, 217, 217, 0.4);
+  background-color: ${props => props.theme.colors.detailColor};
   margin-bottom: 90px;
 `
 
@@ -104,7 +104,8 @@ export const ProcessDescription = styled.p`
 
 export const StatsList = styled.ul`
   display: flex;
-  gap: 60px;
+  gap: 40px;
+  margin-bottom: 170px;
 `
 
 export const StatsItem = styled.li`
@@ -121,4 +122,10 @@ export const StatsTitle = styled.h1`
 export const StatsDescription = styled.p`
   font-family: var(--type-second);
   color: ${props => props.theme.colors.secondaryTextColor};
+`
+
+export const TestDetail = styled.div`
+  height: 90px;
+  width: 1px;
+  background-color: ${props => props.theme.colors.detailColor};
 `

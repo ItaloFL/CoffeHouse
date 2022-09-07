@@ -30,6 +30,7 @@ import {
   StatsItem,
   StatsList,
   StatsTitle,
+  TestDetail,
   TitleCoffe,
   TradicionalCoffeWrapper
 } from './style'
@@ -194,15 +195,44 @@ export function TradicionalCoffe({ toggleTheme }: Props) {
             <StatsTitle>20k+</StatsTitle>
             <StatsDescription>Sacas por mês</StatsDescription>
           </StatsItem>
+          <TestDetail />
           <StatsItem>
             <StatsTitle>400 +</StatsTitle>
             <StatsDescription>Funcionários</StatsDescription>
           </StatsItem>
+          <TestDetail />
           <StatsItem>
             <StatsTitle>20+</StatsTitle>
             <StatsDescription>Plantios de café</StatsDescription>
           </StatsItem>
         </StatsList>
+
+        <TextTitle text="perguntas frequentes" />
+        <TitleCoffe>Perguntas mais frequentes</TitleCoffe>
+        <dl>
+          <dt>Qual é o café?</dt>
+          <dd>O café atual é o tradicional, com nossos melhores metodos de preparo e entrega para você!</dd>
+
+          <dt>Qual a diferença entre o Tradicional e os demais?</dt>
+          <dd>Temos diversas diferenças, entre elas o sabor que no caso do tradicional é mais forte que por exemplo
+            o tipo de café gourmet, onde o metodo de preparo é diferente, e a torrefação tambem!
+          </dd>
+
+          <dt>Entrega fora do Brasil?</dt>
+          <dd>Sim, entregamos para fora do Brasil, basta na compra colocar o cep do seu endereço e pagar a taxa
+            de entrega que calculamos.
+          </dd>
+
+          <dt>O que fazer se não houver estoque?</dt>
+          <dd>Pode nos mandar uma mensagem em uma de nossas redes sociais, e mandaremos para você um calendairo
+            com os possiveis meses em que teremos estoque de volta
+          </dd>
+
+          <dt>Quais as formas de pagamento?</dt>
+          <dd>A nossas formas de pagamento são completas, tanto cartões de debito e credito, boletos, e pix.</dd>
+        </dl>
+
+
       </TradicionalCoffeWrapper>
     </>
   )
