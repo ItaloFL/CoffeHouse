@@ -17,6 +17,8 @@ declare module 'styled-components' {
       borderColor: string
       themeHoverColor: string
       logoColor: string
+      detailColor: string
+      detailTitleColor: string
     }
   }
 }

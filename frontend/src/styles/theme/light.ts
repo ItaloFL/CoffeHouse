@@ -13,6 +13,8 @@ export const light = {
     footerListColor: '#71717A',
     borderColor: '#D4D4D8',
     themeHoverColor: '#E4E4E4',
-    logoColor: '#181818'
+    logoColor: '#181818',
+    detailColor: 'rgba(39, 39, 42, 0.2)',
+    detailTitleColor: '#0345A8'
   }
 }
