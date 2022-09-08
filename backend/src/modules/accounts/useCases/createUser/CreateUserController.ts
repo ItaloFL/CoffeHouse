@@ -5,6 +5,7 @@ import { CreateUserUseCase } from './CreateUserUseCase'
 export class CreateUserController {
   async handle(request: Request, response: Response) {
     const { name, email, telefone, password } = request.body
+    const image = request?.file!.filename
 
     const userRepository = new PrismaUserRepository()
     const createUserUseCase = new CreateUserUseCase(userRepository)
@@ -13,7 +14,8 @@ export class CreateUserController {
       name,
       email,
       telefone,
-      password
+      password,
+      image
     })
 
     return response.json(user)

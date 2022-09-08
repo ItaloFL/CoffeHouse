@@ -16,7 +16,8 @@ describe('Authenticate user', () => {
       name: 'test',
       email: 'test@test.com',
       password: 'testPassword',
-      telefone: 'testPhone'
+      telefone: 'testPhone',
+      image: 'testImage'
     })
 
     const login = await authenticateUserUseCase.execute({

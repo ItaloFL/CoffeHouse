@@ -9,7 +9,7 @@ export class EditProductController {
   async handle(request: Request, response: Response){
 
     const { name, description, price } = request.body;
-    const image = request?.file?.filename
+    const image = request.file!.filename
     
     const productRepository = new PrismaProductRepository()
     const editProductUseCase = new EditProductUseCase(productRepository)

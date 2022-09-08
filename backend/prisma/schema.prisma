@@ -16,6 +16,7 @@ model User {
   email      String       @unique
   telefone   String
   password   String
+  image      String
   created_at DateTime     @default(now())
   Depoimento Depoimento[]
 

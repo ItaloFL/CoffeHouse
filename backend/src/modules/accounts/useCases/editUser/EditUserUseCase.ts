@@ -5,12 +5,13 @@ export type EditUserRequest = {
   id: string
   name: string
   telefone: string
+  image: string
 }
 
 export class EditUserUseCase {
   constructor(private userRepository: UserRepository) {}
 
-  async execute({ id, name, telefone }: EditUserRequest) {
+  async execute({ id, name, telefone, image }: EditUserRequest) {
     const verifyIfUserExist = await this.userRepository.findUserById(id)
 
     if (!verifyIfUserExist) throw new AppError('Esse usuário não existe.')

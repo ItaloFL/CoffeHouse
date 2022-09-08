@@ -19,7 +19,8 @@ describe('Create a depoiment', () => {
       name: 'testDepoimentUser',
       email: 'test@test.com',
       password: 'testPassword',
-      telefone: 'testPhone'
+      telefone: 'testPhone',
+      image: 'testImage'
     })
 
     const depoimentObeject = await createDepoimentUseCase.execute({
@@ -44,7 +45,8 @@ describe('Create a depoiment', () => {
       name: 'test2DepoimentUser',
       email: 'test2@test.com',
       password: 'test2Password',
-      telefone: 'test2Phone'
+      telefone: 'test2Phone',
+      image: 'testImage'
     })
 
     await expect(

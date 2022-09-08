@@ -14,13 +14,15 @@ describe('Edit a user', () => {
       name: 'testEdit',
       email: 'testEdit@test.com',
       password: 'testPassword',
-      telefone: 'testPhone'
+      telefone: 'testPhone',
+      image: 'testImage'
     })
 
     await editUserUseCase.execute({
       id: user.id,
       name: 'testEditModified',
       telefone: 'testPhoneModified'
+      ,image: 'testImageModified'
     })
 
     expect(user).toMatchObject({
@@ -34,7 +36,8 @@ describe('Edit a user', () => {
       editUserUseCase.execute({
         id: 'test',
         name: 'test',
-        telefone: 'test'
+        telefone: 'test',
+        image: 'test'
       })
     ).rejects.toEqual(new AppError('Esse usuário não existe.'))
   })

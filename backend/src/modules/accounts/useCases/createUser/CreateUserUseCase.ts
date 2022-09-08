@@ -7,15 +7,17 @@ export type UserType = {
   email: string
   telefone: string
   password: string
+  image: string
 }
 
 export class CreateUserUseCase {
   constructor(private userRepository: UserRepository) {}
 
-  async execute({ name, email, telefone, password }: UserType) {
+  async execute({ name, email, telefone, password, image }: UserType) {
     const user = await this.userRepository.findUserByEmail(email)
 
-    if (user) throw new AppError('Já existe um usuário cadastrado com esse Email.')
+    if (user)
+      throw new AppError('Já existe um usuário cadastrado com esse Email.')
 
     const hashPassword = await hash(password, 8)
 
@@ -23,7 +25,8 @@ export class CreateUserUseCase {
       name,
       email,
       telefone,
-      password: hashPassword
+      password: hashPassword,
+      image
     })
 
     return createdUser

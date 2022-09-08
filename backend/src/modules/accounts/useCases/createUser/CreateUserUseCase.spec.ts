@@ -12,7 +12,8 @@ describe('Create a User', () => {
       name: 'test',
       email: 'test@test.com',
       password: 'testPassword',
-      telefone: 'testPhone'
+      telefone: 'testPhone',
+      image: 'testImage'
     })
 
     expect(user).toHaveProperty('id')
@@ -24,7 +25,8 @@ describe('Create a User', () => {
         name: 'test2',
         email: 'test@test.com',
         password: 'testPassword2',
-        telefone: 'testPhone2'
+        telefone: 'testPhone2',
+        image: 'testImage2'
       })
     ).rejects.toEqual(new AppError('Já existe um usuário cadastrado com esse Email.'))
   })

@@ -5,10 +5,11 @@ export type UserType = {
   email: string
   telefone: string
   password: string
+  image: string
 }
 
 export interface UserRepository {
-  create({ name, email, telefone, password }: UserType): Promise<User>
+  create({ name, email, telefone, password, image }: UserType): Promise<User>
 
   findUserByEmail(email: string): Promise<User | null>
 

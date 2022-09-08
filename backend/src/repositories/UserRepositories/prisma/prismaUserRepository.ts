@@ -3,13 +3,20 @@ import { client } from '../../../database/Prisma/client'
 import { UserRepository, UserType } from '../userRepository'
 
 export class PrismaUserRepository implements UserRepository {
-  async create({ name, email, telefone, password }: UserType): Promise<User> {
+  async create({
+    name,
+    email,
+    telefone,
+    password,
+    image
+  }: UserType): Promise<User> {
     const user = await client.user.create({
       data: {
         name,
         email,
         telefone,
-        password
+        password,
+        image
       }
     })
 
