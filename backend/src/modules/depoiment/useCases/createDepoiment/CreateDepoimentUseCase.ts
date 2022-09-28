@@ -26,7 +26,7 @@ export class CreateDepoimentUseCase {
     
     const depoiment = await this.depoimentRepository.create({
       user,
-      depoimento
+      depoimento,
     })
 
     return depoiment
