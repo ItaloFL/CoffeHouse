@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd src/server.ts",
+    "dev": "tsnd --exit-child --transpile-only src/server.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },

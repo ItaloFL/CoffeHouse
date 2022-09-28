@@ -3,9 +3,12 @@ import 'express-async-errors'
 import { routes } from './routes/routes'
 import cors from 'cors'
 import { AppError } from './errors/AppError/AppError'
+import path from 'path'
 
 const app = express()
 app.use(cors())
+app.use(express.urlencoded({ extended: true }))
+app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp', 'uploads')))
 app.use(express.json())
 app.use(routes)
 
