@@ -8,4 +8,5 @@ type DepoimentosType = {
 export interface DepoimentoRepository {
   create({ user, depoimento }: DepoimentosType): Promise<Depoimento>
   findDepoiment(depoimento: string): Promise<Depoimento | null>
+  findAllDepoiments(): Promise<Depoimento[]>
 }

@@ -3,6 +3,7 @@ import { DepoimentoRepository } from '../depoimentoRepository'
 import { client } from '../../../database/Prisma/client'
 
 export class prismaDepoimentoRepository implements DepoimentoRepository {
+  
   async create({
     user,
     depoimento
@@ -14,7 +15,8 @@ export class prismaDepoimentoRepository implements DepoimentoRepository {
       data: {
         user,
         depoimento
-      }
+      },
+
     })
 
     return Depoimento
@@ -24,9 +26,24 @@ export class prismaDepoimentoRepository implements DepoimentoRepository {
     const depoiment = await client.depoimento.findFirst({
       where: {
         depoimento
-      }
+      },
     })
 
     return depoiment
+  }
+  
+  async findAllDepoiments(): Promise<Depoimento[]> {
+    const depoiments = await client.depoimento.findMany({
+      include: {
+        name: {
+          select: {
+            name: true,
+            image: true
+          }
+        }
+      }
+    })
+
+    return depoiments
   }
 }
