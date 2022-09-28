@@ -27,7 +27,7 @@ export class AuthenticateUserUseCase {
 
     const token = sign(
       { id: verifyIfUserExist.id },
-      'bff4106dd72767a7b4ace9373108d799',
+      String(process.env.SECRET_KEY_TOKEN),
       {
         subject: verifyIfUserExist.id
       }
