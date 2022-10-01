@@ -10,7 +10,7 @@ declare module 'styled-components' {
       cardColor: string
       primaryTextColor: string
       secondaryTextColor: string
-      secondaryTextState: string,
+      secondaryTextState: string
       formBackgroudColor: string
       footerListTitleColor: string
       footerListColor: string
@@ -19,6 +19,7 @@ declare module 'styled-components' {
       logoColor: string
       detailColor: string
       detailTitleColor: string
+      depoimentBackground: string
     }
   }
 }

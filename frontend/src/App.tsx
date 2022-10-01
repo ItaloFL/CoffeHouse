@@ -23,9 +23,9 @@ export function App() {
           <GlobalStyles />
           <Routes>
             <Route path="/" element={<Home toggleTheme={toggleTheme} />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/tradicional" element={<TradicionalCoffe toggleTheme={toggleTheme} />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="signin" element={<SignIn />} />
+            <Route path="tradicional" element={<TradicionalCoffe toggleTheme={toggleTheme} />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

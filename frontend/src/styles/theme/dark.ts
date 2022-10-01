@@ -8,6 +8,7 @@ export const dark = {
     primaryTextColor: '#FFFFFF',
     secondaryTextColor: '#A6AAAD',
     secondaryTextState: '#A6AAAD',
+    depoimentBackground: '#1E1E1E',
     formBackgroudColor: '#1C1C1C',
     footerListTitleColor: '#666666',
     footerListColor: '#A6AAAD',
@@ -15,6 +16,6 @@ export const dark = {
     themeHoverColor: '#39393C',
     logoColor: '#FFFFFF',
     detailColor: 'rgba(217, 217, 217, 0.2)',
-    detailTitleColor: '#7CAAEF'
+    detailTitleColor: '#7CAAEF',
   }
 }
