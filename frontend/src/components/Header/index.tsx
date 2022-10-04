@@ -1,16 +1,21 @@
 import {
   ButtonEnter,
+  ContentListItem,
   HeaderButton,
   HeaderContent,
   HeaderWrapper,
   MenuItens,
   MenuWrapper,
+  NavigationMenuList,
   ThemeButton
 } from './style'
 import { Link } from 'react-router-dom'
 import { SunDim, User } from 'phosphor-react'
-import LogoImage from '../../assets/LogoDark.svg'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import { Logo } from '../../styles/globalStyles'
+import tradicionalCoffeImage from '../../assets/tradicional.svg'
+import gourmetCoffeImage from '../../assets/gourmet.svg'
+import extraforteCoffeImage from '../../assets/extraforte.svg'
 
 type Props = {
   toggleTheme(): void
@@ -40,19 +45,43 @@ export function Header({ toggleTheme }: Props) {
             </Logo>
           </Link>
 
-          <MenuWrapper>
-            <MenuItens>
-              <li>
-                <a href="">Home</a>
-              </li>
-              <li>
-                <a href="">Cafés</a>
-              </li>
-              <li>
-                <a href="">Contato</a>
-              </li>
-            </MenuItens>
-          </MenuWrapper>
+          <NavigationMenu.Root>
+            <NavigationMenuList>
+              <NavigationMenu.Item>
+                <NavigationMenu.Link href="http://localhost:3000/">
+                  Home
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+
+              <NavigationMenu.Item>
+                <NavigationMenu.Trigger>Cafés</NavigationMenu.Trigger>
+                <NavigationMenu.Content>
+                  <ContentListItem>
+                    <li>
+                      <img src={tradicionalCoffeImage} alt="" />
+                      <p>Tradicional Coffe</p>
+                    </li>
+                    <li>
+                      <img src={gourmetCoffeImage} alt="" />
+                      <p>Gourmet Coffe</p>
+                    </li>
+                    <li>
+                      <img src={extraforteCoffeImage} alt="" />
+                      <p>Extra-Forte Coffe</p>
+                    </li>
+                  </ContentListItem>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
+
+              <NavigationMenu.Item>
+                <NavigationMenu.Link href="http://localhost:3000/tradicional">
+                  Contato
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+            </NavigationMenuList>
+
+            <NavigationMenu.Viewport />
+          </NavigationMenu.Root>
 
           <HeaderButton>
             <Link className="signin" to="signin">

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import User from '../../assets/user.svg'
 import { Container } from '../../styles/layout/Container'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 
 export const HeaderWrapper = styled.div`
   background-color: ${props => props.theme.colors.secondaryColor};
@@ -110,4 +111,16 @@ export const ThemeButton = styled.button`
   &:hover {
     background-color: ${props => props.theme.colors.themeHoverColor};
   }
+`
+
+export const NavigationMenuList = styled(NavigationMenu.List)`
+  display: flex;
+  align-items: center;
+  gap: 3.75rem;
+`
+
+export const ContentListItem = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 40px;
 `
