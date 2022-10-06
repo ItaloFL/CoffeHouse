@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import User from '../../assets/user.svg'
 import { Container } from '../../styles/layout/Container'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
@@ -12,7 +12,6 @@ export const HeaderContent = styled(Container)`
   align-items: center;
   justify-content: space-between;
   height: 5rem;
-  color: #a6aaad;
   font-family: 'Roboto';
 `
 
@@ -122,5 +121,54 @@ export const NavigationMenuList = styled(NavigationMenu.List)`
 export const ContentListItem = styled.ul`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 40px;
+  height: 200px;
+`
+
+const borderLink = keyframes({
+  from: { border: 0 },
+  to: {
+    border: 100
+  }
+})
+
+export const NavigationMenuContent = styled(NavigationMenu.Content)`
+  margin-top: 30px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  background-color: ${props => props.theme.colors.secondaryColor};
+  width: 100vw;
+`
+
+export const NavigationMenuViewport = styled(NavigationMenu.Viewport)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--radix-navigation-menu-viewport-height);
+  margin-top: 50px;
+`
+
+export const NavigationMenuItem = styled(NavigationMenu.Item)``
+
+export const NavigationMenuTrigger = styled(NavigationMenu.Trigger)`
+  all: unset;
+  color: #a6aaad;
+
+  &:hover {
+    color: white;
+    border-bottom: 1px solid blue;
+    animation: borderLink 2s;
+  }
+`
+export const NavigationMenuLink = styled(NavigationMenu.Link)`
+  text-decoration: none;
+  color: #a6aaad;
+  width: 0;
+
+  &:hover {
+    color: white;
+    border-bottom: 1px solid blue;
+    transition: width .3s;
+  } 
 `

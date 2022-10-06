@@ -4,9 +4,12 @@ import {
   HeaderButton,
   HeaderContent,
   HeaderWrapper,
-  MenuItens,
-  MenuWrapper,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
   ThemeButton
 } from './style'
 import { Link } from 'react-router-dom'
@@ -47,40 +50,40 @@ export function Header({ toggleTheme }: Props) {
 
           <NavigationMenu.Root>
             <NavigationMenuList>
-              <NavigationMenu.Item>
-                <NavigationMenu.Link href="http://localhost:3000/">
+              <NavigationMenuItem>
+                <NavigationMenuLink href="http://localhost:3000/">
                   Home
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
-              <NavigationMenu.Item>
-                <NavigationMenu.Trigger>Cafés</NavigationMenu.Trigger>
-                <NavigationMenu.Content>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Cafés</NavigationMenuTrigger>
+                <NavigationMenuContent>
                   <ContentListItem>
-                    <li>
+                    <Link to="tradicional">
                       <img src={tradicionalCoffeImage} alt="" />
                       <p>Tradicional Coffe</p>
-                    </li>
-                    <li>
+                    </Link>
+                    <Link to="tradicional">
                       <img src={gourmetCoffeImage} alt="" />
                       <p>Gourmet Coffe</p>
-                    </li>
-                    <li>
+                    </Link>
+                    <Link to="tradicional">
                       <img src={extraforteCoffeImage} alt="" />
                       <p>Extra-Forte Coffe</p>
-                    </li>
+                    </Link>
                   </ContentListItem>
-                </NavigationMenu.Content>
-              </NavigationMenu.Item>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-              <NavigationMenu.Item>
-                <NavigationMenu.Link href="http://localhost:3000/tradicional">
+              <NavigationMenuItem>
+                <NavigationMenuLink href="http://localhost:3000/tradicional">
                   Contato
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
             </NavigationMenuList>
 
-            <NavigationMenu.Viewport />
+            <NavigationMenuViewport />
           </NavigationMenu.Root>
 
           <HeaderButton>
