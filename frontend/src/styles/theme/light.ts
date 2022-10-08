@@ -1,7 +1,7 @@
 export const light = {
   name: 'light',
   colors: {
-    background: '#EBEBEB',
+    background: '#FFFFFF',
     secondaryColor: '#E7E7E7',
     thirdColor: '#71717A',
     cardColor: '#F4F4F5',
@@ -17,5 +17,8 @@ export const light = {
     logoColor: '#181818',
     detailColor: 'rgba(39, 39, 42, 0.2)',
     detailTitleColor: '#0345A8',
+    headerBorderBottomColor: '#EAEAEA',
+    navigationMenuBackground: '#FFFFFF',
+    navigationMenuBorder: '#EAEAEA'
   }
 }

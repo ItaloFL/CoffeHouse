@@ -20,6 +20,9 @@ declare module 'styled-components' {
       detailColor: string
       detailTitleColor: string
       depoimentBackground: string
+      headerBorderBottomColor: string
+      navigationMenuBackground: string
+      navigationMenuBorder: string
     }
   }
 }

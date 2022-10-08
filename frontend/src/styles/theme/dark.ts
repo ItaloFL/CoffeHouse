@@ -17,5 +17,8 @@ export const dark = {
     logoColor: '#FFFFFF',
     detailColor: 'rgba(217, 217, 217, 0.2)',
     detailTitleColor: '#7CAAEF',
+    headerBorderBottomColor: '#36363C',
+    navigationMenuBackground: '#121214',
+    navigationMenuBorder: '#36363C'
   }
 }
