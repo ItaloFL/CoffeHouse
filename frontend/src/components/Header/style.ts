@@ -2,9 +2,11 @@ import styled, { keyframes } from 'styled-components'
 import User from '../../assets/user.svg'
 import { Container } from '../../styles/layout/Container'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import { Link } from 'react-router-dom'
 
 export const HeaderWrapper = styled.div`
-  background-color: ${props => props.theme.colors.secondaryColor};
+  background-color: ${props => props.theme.colors.background};
+  border-bottom: 1px solid ${props => props.theme.colors.headerBorderBottomColor};
 `
 
 export const HeaderContent = styled(Container)`
@@ -122,8 +124,12 @@ export const ContentListItem = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 90px;
   height: 200px;
+
+  &:li {
+    text-decoration: none;
+  }
 `
 
 const borderLink = keyframes({
@@ -135,9 +141,9 @@ const borderLink = keyframes({
 
 export const NavigationMenuContent = styled(NavigationMenu.Content)`
   margin-top: 30px;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  background-color: ${props => props.theme.colors.secondaryColor};
+  border-top: 1px solid ${props => props.theme.colors.navigationMenuBorder};
+  border-bottom: 1px solid ${props => props.theme.colors.navigationMenuBorder};
+  background-color: ${props => props.theme.colors.navigationMenuBackground};
   width: 100vw;
 `
 
@@ -149,26 +155,60 @@ export const NavigationMenuViewport = styled(NavigationMenu.Viewport)`
   margin-top: 50px;
 `
 
-export const NavigationMenuItem = styled(NavigationMenu.Item)``
+export const NavigationMenuItem = styled(NavigationMenu.Item)`
+  padding: 28px 0px 28px;
+
+  &:hover {
+    color: white;
+    border-bottom: 2px solid #297df9;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+  }
+`
 
 export const NavigationMenuTrigger = styled(NavigationMenu.Trigger)`
   all: unset;
   color: #a6aaad;
-
-  &:hover {
-    color: white;
-    border-bottom: 1px solid blue;
-    animation: borderLink 2s;
-  }
 `
 export const NavigationMenuLink = styled(NavigationMenu.Link)`
   text-decoration: none;
   color: #a6aaad;
   width: 0;
+`
+
+export const MenuButtonIcon = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+`
+
+export const ItemListWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 4px;
 
   &:hover {
-    color: white;
-    border-bottom: 1px solid blue;
-    transition: width .3s;
-  } 
+    background-color: ${props => props.theme.colors.cardColor};
+    border: 1px solid ${props => props.theme.colors.borderColor};
+  }
+`
+
+export const ItemListTitle = styled.p`
+  font-family: var(--type-frist);
+  font-weight: bold;
+  color: ${props => props.theme.colors.primaryTextColor};
+  text-decoration: none;
+  margin-bottom: 3px;
+`
+
+export const ItemListText = styled.p`
+  font-family: var(--type-second);
+  color: ${props => props.theme.colors.footerListTitleColor};
+`
+
+export const LinkStyled = styled(Link)`
+  all: unset;
+  cursor: pointer;
 `

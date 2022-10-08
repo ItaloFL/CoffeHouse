@@ -4,6 +4,11 @@ import {
   HeaderButton,
   HeaderContent,
   HeaderWrapper,
+  ItemListText,
+  ItemListTitle,
+  ItemListWrapper,
+  LinkStyled,
+  MenuButtonIcon,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
@@ -13,7 +18,7 @@ import {
   ThemeButton
 } from './style'
 import { Link } from 'react-router-dom'
-import { SunDim, User } from 'phosphor-react'
+import { CaretDown, SunDim, User } from 'phosphor-react'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import { Logo } from '../../styles/globalStyles'
 import tradicionalCoffeImage from '../../assets/tradicional.svg'
@@ -57,21 +62,41 @@ export function Header({ toggleTheme }: Props) {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Cafés</NavigationMenuTrigger>
+                <NavigationMenuTrigger>
+                  <MenuButtonIcon>
+                    Cafés
+                    <CaretDown size={15} color="#297DF9" weight="bold" />
+                  </MenuButtonIcon>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ContentListItem>
-                    <Link to="tradicional">
-                      <img src={tradicionalCoffeImage} alt="" />
-                      <p>Tradicional Coffe</p>
-                    </Link>
-                    <Link to="tradicional">
-                      <img src={gourmetCoffeImage} alt="" />
-                      <p>Gourmet Coffe</p>
-                    </Link>
-                    <Link to="tradicional">
-                      <img src={extraforteCoffeImage} alt="" />
-                      <p>Extra-Forte Coffe</p>
-                    </Link>
+                    <LinkStyled to="tradicional">
+                      <ItemListWrapper>
+                        <img src={tradicionalCoffeImage} alt="" />
+                        <div>
+                          <ItemListTitle>Tradicional</ItemListTitle>
+                          <ItemListText>Nosso melhor café</ItemListText>
+                        </div>
+                      </ItemListWrapper>
+                    </LinkStyled>
+                    <LinkStyled to="tradicional">
+                      <ItemListWrapper>
+                        <img src={gourmetCoffeImage} alt="" />
+                        <div>
+                          <ItemListTitle>Gourmet</ItemListTitle>
+                          <ItemListText>Café Gourmet de verdade</ItemListText>
+                        </div>
+                      </ItemListWrapper>
+                    </LinkStyled>
+                    <LinkStyled to="tradicional">
+                      <ItemListWrapper>
+                        <img src={extraforteCoffeImage} alt="" />
+                        <div>
+                          <ItemListTitle>Extra-Forte</ItemListTitle>
+                          <ItemListText>Café para poucos.</ItemListText>
+                        </div>
+                      </ItemListWrapper>
+                    </LinkStyled>
                   </ContentListItem>
                 </NavigationMenuContent>
               </NavigationMenuItem>
