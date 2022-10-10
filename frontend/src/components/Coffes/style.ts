@@ -30,5 +30,6 @@ export const CoffeIcon = styled.div`
 
 export const CoffeItens = styled.div`
   display: flex;
-  gap: 8.4rem;
+  flex-direction: column;
+  gap: 4rem;
 `
