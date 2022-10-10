@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 
 export const HeaderWrapper = styled.div`
   background-color: ${props => props.theme.colors.background};
-  border-bottom: 1px solid ${props => props.theme.colors.headerBorderBottomColor};
+  border-bottom: 1px solid
+    ${props => props.theme.colors.headerBorderBottomColor};
 `
 
 export const HeaderContent = styled(Container)`
@@ -132,19 +133,12 @@ export const ContentListItem = styled.ul`
   }
 `
 
-const borderLink = keyframes({
-  from: { border: 0 },
-  to: {
-    border: 100
-  }
-})
-
 export const NavigationMenuContent = styled(NavigationMenu.Content)`
   margin-top: 30px;
   border-top: 1px solid ${props => props.theme.colors.navigationMenuBorder};
   border-bottom: 1px solid ${props => props.theme.colors.navigationMenuBorder};
   background-color: ${props => props.theme.colors.navigationMenuBackground};
-  width: 100vw;
+  width: 95vw;
 `
 
 export const NavigationMenuViewport = styled(NavigationMenu.Viewport)`
@@ -188,11 +182,6 @@ export const ItemListWrapper = styled.div`
   text-decoration: none;
   padding: 15px;
   border-radius: 4px;
-
-  &:hover {
-    background-color: ${props => props.theme.colors.cardColor};
-    border: 1px solid ${props => props.theme.colors.borderColor};
-  }
 `
 
 export const ItemListTitle = styled.p`
@@ -211,4 +200,11 @@ export const ItemListText = styled.p`
 export const LinkStyled = styled(Link)`
   all: unset;
   cursor: pointer;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.hoverNavigationMenuItem};
+    border: 1px solid ${props => props.theme.colors.borderColor};
+  }
 `

@@ -79,7 +79,7 @@ export function Header({ toggleTheme }: Props) {
                         </div>
                       </ItemListWrapper>
                     </LinkStyled>
-                    <LinkStyled to="tradicional">
+                    <LinkStyled to="test">
                       <ItemListWrapper>
                         <img src={gourmetCoffeImage} alt="" />
                         <div>
@@ -88,7 +88,7 @@ export function Header({ toggleTheme }: Props) {
                         </div>
                       </ItemListWrapper>
                     </LinkStyled>
-                    <LinkStyled to="tradicional">
+                    <LinkStyled to="broxa">
                       <ItemListWrapper>
                         <img src={extraforteCoffeImage} alt="" />
                         <div>
