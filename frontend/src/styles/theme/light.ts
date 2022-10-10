@@ -19,6 +19,8 @@ export const light = {
     detailTitleColor: '#0345A8',
     headerBorderBottomColor: '#EAEAEA',
     navigationMenuBackground: '#FFFFFF',
-    navigationMenuBorder: '#EAEAEA'
+    navigationMenuBorder: '#EAEAEA',
+    linkFooterHover: '#161617',
+    hoverNavigationMenuItem: '#FAFAFA'
   }
 }

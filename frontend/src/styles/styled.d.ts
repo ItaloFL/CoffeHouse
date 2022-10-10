@@ -23,6 +23,8 @@ declare module 'styled-components' {
       headerBorderBottomColor: string
       navigationMenuBackground: string
       navigationMenuBorder: string
+      linkFooterHover: string
+      hoverNavigationMenuItem: string
     }
   }
 }

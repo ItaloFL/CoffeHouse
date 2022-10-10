@@ -156,7 +156,7 @@ export function TradicionalCoffe({ toggleTheme }: Props) {
             <FrequentesTitle>
               <TitleWrapper>
                 Qual é o café?
-                <Plus size={30} color="#fff" />
+                <Plus size={25} color="currentcolor" />
               </TitleWrapper>
             </FrequentesTitle>
             <StyledContent>
@@ -168,7 +168,7 @@ export function TradicionalCoffe({ toggleTheme }: Props) {
             <FrequentesTitle>
               <TitleWrapper>
                 Qual a diferença entre o Tradicional e os demais?
-                <Plus size={30} color="#fff" />
+                <Plus size={25} color="currentcolor" />
               </TitleWrapper>
             </FrequentesTitle>
             <StyledContent>
@@ -181,7 +181,7 @@ export function TradicionalCoffe({ toggleTheme }: Props) {
             <FrequentesTitle>
               <TitleWrapper>
                 Entrega fora do Brasil?
-                <Plus size={30} color="#fff" />
+                <Plus size={25} color="currentcolor" />
               </TitleWrapper>
             </FrequentesTitle>
             <StyledContent>
@@ -193,7 +193,7 @@ export function TradicionalCoffe({ toggleTheme }: Props) {
             <FrequentesTitle>
               <TitleWrapper>
                 O que fazer se não houver estoque?
-                <Plus size={30} color="#fff" />
+                <Plus size={25} color="currentcolor" />
               </TitleWrapper>
             </FrequentesTitle>
             <StyledContent>
@@ -206,7 +206,7 @@ export function TradicionalCoffe({ toggleTheme }: Props) {
             <FrequentesTitle>
               <TitleWrapper>
                 Quais as formas de pagamento?
-                <Plus size={30} color="#fff" />
+                <Plus size={25} color="currentcolor" />
               </TitleWrapper>
             </FrequentesTitle>
             <StyledContent>
