@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import User from '../../assets/user.svg'
 import { Container } from '../../styles/layout/Container'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
@@ -37,6 +37,11 @@ export const HeaderButton = styled.nav`
     color: ${props => props.theme.colors.primaryTextColor};
     text-decoration: none;
     font-weight: bold;
+
+
+    @media(max-width: 900px) {
+      display: none;
+    }
   }
 
   .signup {
@@ -51,11 +56,7 @@ export const HeaderButton = styled.nav`
     cursor: pointer;
     font-weight: bold;
 
-    &:hover {
-      background-color: #297df9;
-      transition: 0.6s;
-    }
-
+    &:hover,
     &:focus {
       background-color: #297df9;
       transition: 0.6s;
@@ -66,6 +67,10 @@ export const HeaderButton = styled.nav`
       background: url(${User});
       height: 12px;
       height: 12px;
+    }
+
+    @media(max-width: 900px) {
+      display: none;
     }
   }
 `

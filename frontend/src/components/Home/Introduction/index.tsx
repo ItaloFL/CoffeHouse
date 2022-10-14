@@ -8,9 +8,7 @@ export function Introduction() {
     <>
       <IntroContent>
         <Title
-          fontSize="48px"
           Text="Venha conhecer nossos tipos do melhor café."
-          maxWidth="520px"
         />
 
         <IntroDescription>

@@ -29,6 +29,8 @@ type Props = {
   toggleTheme(): void
 }
 
+const media = matchMedia('(max-width: 768px)').matches
+
 export function Header({ toggleTheme }: Props) {
   return (
     <>
@@ -53,63 +55,67 @@ export function Header({ toggleTheme }: Props) {
             </Logo>
           </Link>
 
-          <NavigationMenu.Root>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuLink href="http://localhost:3000/">
-                  Home
-                </NavigationMenuLink>
-              </NavigationMenuItem>
+          {media ? (
+            'Teste'
+          ) : (
+            <NavigationMenu.Root>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuLink href="http://localhost:3000/">
+                    Home
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>
-                  <MenuButtonIcon>
-                    Cafés
-                    <CaretDown size={15} color="#297DF9" weight="bold" />
-                  </MenuButtonIcon>
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ContentListItem>
-                    <LinkStyled to="tradicional">
-                      <ItemListWrapper>
-                        <img src={tradicionalCoffeImage} alt="" />
-                        <div>
-                          <ItemListTitle>Tradicional</ItemListTitle>
-                          <ItemListText>Nosso melhor café</ItemListText>
-                        </div>
-                      </ItemListWrapper>
-                    </LinkStyled>
-                    <LinkStyled to="test">
-                      <ItemListWrapper>
-                        <img src={gourmetCoffeImage} alt="" />
-                        <div>
-                          <ItemListTitle>Gourmet</ItemListTitle>
-                          <ItemListText>Café Gourmet de verdade</ItemListText>
-                        </div>
-                      </ItemListWrapper>
-                    </LinkStyled>
-                    <LinkStyled to="broxa">
-                      <ItemListWrapper>
-                        <img src={extraforteCoffeImage} alt="" />
-                        <div>
-                          <ItemListTitle>Extra-Forte</ItemListTitle>
-                          <ItemListText>Café para poucos.</ItemListText>
-                        </div>
-                      </ItemListWrapper>
-                    </LinkStyled>
-                  </ContentListItem>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>
+                    <MenuButtonIcon>
+                      Cafés
+                      <CaretDown size={15} color="#297DF9" weight="bold" />
+                    </MenuButtonIcon>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ContentListItem>
+                      <LinkStyled to="tradicional">
+                        <ItemListWrapper>
+                          <img src={tradicionalCoffeImage} alt="" />
+                          <div>
+                            <ItemListTitle>Tradicional</ItemListTitle>
+                            <ItemListText>Nosso melhor café</ItemListText>
+                          </div>
+                        </ItemListWrapper>
+                      </LinkStyled>
+                      <LinkStyled to="test">
+                        <ItemListWrapper>
+                          <img src={gourmetCoffeImage} alt="" />
+                          <div>
+                            <ItemListTitle>Gourmet</ItemListTitle>
+                            <ItemListText>Café Gourmet de verdade</ItemListText>
+                          </div>
+                        </ItemListWrapper>
+                      </LinkStyled>
+                      <LinkStyled to="broxa">
+                        <ItemListWrapper>
+                          <img src={extraforteCoffeImage} alt="" />
+                          <div>
+                            <ItemListTitle>Extra-Forte</ItemListTitle>
+                            <ItemListText>Café para poucos.</ItemListText>
+                          </div>
+                        </ItemListWrapper>
+                      </LinkStyled>
+                    </ContentListItem>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuLink href="http://localhost:3000/tradicional">
-                  Contato
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuLink href="http://localhost:3000/tradicional">
+                    Contato
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
 
-            <NavigationMenuViewport />
-          </NavigationMenu.Root>
+              <NavigationMenuViewport />
+            </NavigationMenu.Root>
+          )}
 
           <HeaderButton>
             <Link className="signin" to="signin">

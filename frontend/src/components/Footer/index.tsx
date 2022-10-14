@@ -12,6 +12,7 @@ import { Logo } from '../../styles/globalStyles'
 import { Link } from 'react-router-dom'
 
 
+
 export function Footer() {
   return (
     <FooterWrapper>

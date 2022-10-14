@@ -10,6 +10,12 @@ export const FooterWrapper = styled.div`
 export const FooterContent = styled(Container)`
   display: flex;
   gap: 7.5rem;
+
+  @media(max-width: 800px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 3rem;
+  }
 `
 
 export const CoffeLogo = styled.div``

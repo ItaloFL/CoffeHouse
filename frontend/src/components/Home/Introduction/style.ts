@@ -17,7 +17,6 @@ export const IntroContent = styled.div`
     padding: 17px 79px;
     margin: 0 auto;
 
-
     :hover,
     :focus {
       background: linear-gradient(#71aaff, #1354b4);
@@ -32,4 +31,9 @@ export const IntroDescription = styled.p`
   max-width: 450px;
   margin: 40px auto;
   line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    max-width: 400px;
+  }
 `
