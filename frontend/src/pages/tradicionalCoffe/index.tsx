@@ -1,7 +1,5 @@
-import { Plus, SunDim, User } from 'phosphor-react'
+import { Plus } from 'phosphor-react'
 import { TextTitle } from '../../components/TextTitle'
-import { Title } from '../../components/Title'
-import { Logo } from '../../styles/globalStyles'
 import ImageCoffe from '../../assets/imagem-coffe.svg'
 import {
   AboutCoffe,
