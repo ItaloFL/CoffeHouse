@@ -34,6 +34,8 @@ export function Coffe() {
       <Title
         Text="Vamos conhecer nossos tipos de 
         café e fique por dentro de tudo!"
+        fontSize='48px'
+        width='720px'
       />
       <CoffeItemWrapper>
         <CoffeItens>

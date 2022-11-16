@@ -53,5 +53,14 @@ export const ListCoffeTitle = styled.p`
 export const ListDescription = styled.p`
   font-family: var(--type-second);
   color: ${props => props.theme.colors.secondaryTextColor};
-
 `
+
+export const TitleCoffe = styled.h1`
+  font-family: var(--type-frist);
+  font-size: 36px;
+  font-weight: bold;
+  max-width: 305px;
+  color: ${props => props.theme.colors.primaryTextColor};
+  margin-bottom: 40px;
+`
+

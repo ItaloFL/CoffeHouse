@@ -75,7 +75,7 @@ export function Header({ toggleTheme }: Props) {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ContentListItem>
-                      <LinkStyled to="tradicional">
+                      <LinkStyled to="/tradicional">
                         <ItemListWrapper>
                           <img src={tradicionalCoffeImage} alt="" />
                           <div>
@@ -84,7 +84,7 @@ export function Header({ toggleTheme }: Props) {
                           </div>
                         </ItemListWrapper>
                       </LinkStyled>
-                      <LinkStyled to="test">
+                      <LinkStyled to="/gourmet">
                         <ItemListWrapper>
                           <img src={gourmetCoffeImage} alt="" />
                           <div>
@@ -118,14 +118,14 @@ export function Header({ toggleTheme }: Props) {
           )}
 
           <HeaderButton>
-            <Link className="signin" to="signin">
+            <Link className="signin" to="/signin" target={'_blank'}>
               <ButtonEnter>
                 <User size={14} color="#297DF9" weight="fill" />
                 Entrar
               </ButtonEnter>
             </Link>
 
-            <Link className="signup" to="signup">
+            <Link className="signup" to="/signup" target={'_blank'}>
               Criar Conta
             </Link>
 
