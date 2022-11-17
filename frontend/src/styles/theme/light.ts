@@ -21,6 +21,7 @@ export const light = {
     navigationMenuBackground: '#FFFFFF',
     navigationMenuBorder: '#EAEAEA',
     linkFooterHover: '#161617',
-    hoverNavigationMenuItem: '#FAFAFA'
+    hoverNavigationMenuItem: '#FAFAFA',
+    hoverColor: '#FAFAFA'
   }
 }

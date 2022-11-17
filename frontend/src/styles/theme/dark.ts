@@ -21,6 +21,8 @@ export const dark = {
     navigationMenuBackground: '#121214',
     navigationMenuBorder: '#36363C',
     linkFooterHover: '#FFFFFF',
-    hoverNavigationMenuItem: '#36363C'
+    hoverNavigationMenuItem: '#36363C',
+    hoverColor: '#161616'
+
   }
 }

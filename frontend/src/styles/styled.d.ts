@@ -25,6 +25,7 @@ declare module 'styled-components' {
       navigationMenuBorder: string
       linkFooterHover: string
       hoverNavigationMenuItem: string
+      hoverColor: string
     }
   }
 }
