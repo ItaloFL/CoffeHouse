@@ -9,6 +9,7 @@ export function Introduction() {
       <IntroContent>
         <Title
           Text="Venha conhecer nossos tipos do melhor café."
+          fontSize='48px'
         />
 
         <IntroDescription>
