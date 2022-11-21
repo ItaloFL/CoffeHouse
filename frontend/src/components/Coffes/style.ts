@@ -3,16 +3,26 @@ import { Container } from '../../styles/layout/Container'
 
 export const CoffeWrapper = styled(Container)``
 
-export const CoffeItemWrapper = styled.div``
+export const CoffeItemWrapper = styled.div`
+  margin-bottom: 110px;
+`
 
 export const CoffeItem = styled.button`
   display: flex;
-  width: 10rem;
+  width: 11rem;
   align-items: center;
   gap: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.hoverColor};
+    border-color: ${props => props.theme.colors.borderColor};
+  }
 
   p {
     color: ${props => props.theme.colors.primaryTextColor};
