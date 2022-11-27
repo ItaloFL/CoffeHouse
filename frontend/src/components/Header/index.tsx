@@ -93,7 +93,7 @@ export function Header({ toggleTheme }: Props) {
                           </div>
                         </ItemListWrapper>
                       </LinkStyled>
-                      <LinkStyled to="broxa">
+                      <LinkStyled to="/extraforte">
                         <ItemListWrapper>
                           <img src={extraforteCoffeImage} alt="" />
                           <div>
