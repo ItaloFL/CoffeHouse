@@ -9,6 +9,7 @@ import { dark } from './styles/theme/dark'
 import usePersistedTheme from './utils/usePersistedTheme'
 import { TradicionalCoffe } from './pages/tradicionalCoffe'
 import { GourmetCoffe } from './pages/gourmetCoffe'
+import { ExtraForteCoffe } from './pages/extraForteCoffe'
 
 export function App() {
   const [theme, setTheme] = usePersistedTheme('theme', light)
@@ -28,6 +29,7 @@ export function App() {
             <Route path="signin" element={<SignIn />} />
             <Route path="tradicional" element={<TradicionalCoffe toggleTheme={toggleTheme} />} />
             <Route path="gourmet" element={<GourmetCoffe toggleTheme={toggleTheme} />} />
+            <Route path="extraforte" element={<ExtraForteCoffe toggleTheme={toggleTheme} />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
