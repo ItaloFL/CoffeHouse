@@ -19,7 +19,8 @@ export const CoffeItem = styled.button`
   border-radius: 4px;
   border: 1px solid transparent;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${props => props.theme.colors.hoverColor};
     border-color: ${props => props.theme.colors.borderColor};
   }
