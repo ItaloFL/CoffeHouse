@@ -37,9 +37,8 @@ export function MethodCoffe() {
     <>
       <MethodWrapper>
         <Title
-          fontSize="40px"
           Text="Os métodos que usamos para a qualidade de nossos cafés"
-          width="600px"
+          maxWidth='547px'
         />
         <MethodList>
           {typesCoffe.map(type => (

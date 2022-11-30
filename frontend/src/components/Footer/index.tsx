@@ -43,10 +43,10 @@ export function Footer() {
             <Link to="tradicional">Tradicional</Link>
           </ListItem>
           <ListItem>
-            <a href="">Gourmet</a>
+          <Link to="gourmet">Gourmet</Link>
           </ListItem>
           <ListItem>
-            <a href="">Extra Forte</a>
+          <Link to="extraforte">ExtraForte</Link>
           </ListItem>
         </ul>
 

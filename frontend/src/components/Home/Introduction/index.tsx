@@ -9,7 +9,7 @@ export function Introduction() {
       <IntroContent>
         <Title
           Text="Venha conhecer nossos tipos do melhor café."
-          fontSize='48px'
+          maxWidth="516px"
         />
 
         <IntroDescription>
@@ -17,7 +17,9 @@ export function Introduction() {
           selecionados do Brasil.
         </IntroDescription>
 
-        <Link className='LinkButton' to="signup">Venha conosco</Link>
+        <Link className="LinkButton" to="signup">
+          Venha conosco
+        </Link>
       </IntroContent>
     </>
   )

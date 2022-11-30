@@ -3,7 +3,7 @@ import { TitleText } from './style'
 export type PropsTitle = {
   margin?: string
   Text: string
-  fontSize: string
+  fontSize?: string
   maxWidth?: string
   width?: string
   marginBottom?: string

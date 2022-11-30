@@ -38,8 +38,7 @@ export const HeaderButton = styled.nav`
     text-decoration: none;
     font-weight: bold;
 
-
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       display: none;
     }
   }
@@ -69,7 +68,7 @@ export const HeaderButton = styled.nav`
       height: 12px;
     }
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       display: none;
     }
   }
@@ -128,10 +127,13 @@ export const NavigationMenuList = styled(NavigationMenu.List)`
 
 export const ContentListItem = styled.ul`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 90px;
-  height: 200px;
+  gap: 30px;
+  height: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
   &:li {
     text-decoration: none;
@@ -139,28 +141,26 @@ export const ContentListItem = styled.ul`
 `
 
 export const NavigationMenuContent = styled(NavigationMenu.Content)`
-  margin-top: 30px;
-  border-top: 1px solid ${props => props.theme.colors.navigationMenuBorder};
-  border-bottom: 1px solid ${props => props.theme.colors.navigationMenuBorder};
+  margin-top: 10px;
+  border: 1px solid ${props => props.theme.colors.navigationMenuBorder};
   background-color: ${props => props.theme.colors.navigationMenuBackground};
-  width: 95vw;
+  width: 220px;
 `
 
 export const NavigationMenuViewport = styled(NavigationMenu.Viewport)`
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 37%;
   height: var(--radix-navigation-menu-viewport-height);
-  margin-top: 50px;
 `
 
 export const NavigationMenuItem = styled(NavigationMenu.Item)`
   padding: 28px 0px 28px;
+  border-bottom: 2px solid transparent;
 
   &:hover {
     color: white;
-    border-bottom: 2px solid #297df9;
     border-radius: 2px;
+    border-color: #297df9;
     transition: all 0.2s ease;
   }
 `
@@ -191,6 +191,7 @@ export const ItemListWrapper = styled.div`
 
 export const ItemListTitle = styled.p`
   font-family: var(--type-frist);
+  font-size: 14px;
   font-weight: bold;
   color: ${props => props.theme.colors.primaryTextColor};
   text-decoration: none;
@@ -198,6 +199,7 @@ export const ItemListTitle = styled.p`
 `
 
 export const ItemListText = styled.p`
+  font-size: 12px;
   font-family: var(--type-second);
   color: ${props => props.theme.colors.footerListTitleColor};
 `
@@ -206,10 +208,10 @@ export const LinkStyled = styled(Link)`
   all: unset;
   cursor: pointer;
   border-radius: 4px;
+  border: 1px solid transparent;
 
   &:hover,
   &:focus {
-    background-color: ${props => props.theme.colors.hoverNavigationMenuItem};
-    border: 1px solid ${props => props.theme.colors.borderColor};
+    border-color: ${props => props.theme.colors.borderColor};
   }
 `

@@ -89,7 +89,7 @@ export function Header({ toggleTheme }: Props) {
                           <img src={gourmetCoffeImage} alt="" />
                           <div>
                             <ItemListTitle>Gourmet</ItemListTitle>
-                            <ItemListText>Café Gourmet de verdade</ItemListText>
+                            <ItemListText>Melhor gourmet</ItemListText>
                           </div>
                         </ItemListWrapper>
                       </LinkStyled>
