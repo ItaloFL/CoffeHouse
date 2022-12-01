@@ -19,6 +19,7 @@ declare module 'styled-components' {
       logoColor: string
       detailColor: string
       detailTitleColor: string
+      detailTitleColorHover: string
       depoimentBackground: string
       headerBorderBottomColor: string
       navigationMenuBackground: string

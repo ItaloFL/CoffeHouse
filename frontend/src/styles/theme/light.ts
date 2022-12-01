@@ -17,6 +17,7 @@ export const light = {
     logoColor: '#181818',
     detailColor: 'rgba(39, 39, 42, 0.2)',
     detailTitleColor: '#0345A8',
+    detailTitleColorHover: '#7CAAEF',
     headerBorderBottomColor: '#EAEAEA',
     navigationMenuBackground: '#FFFFFF',
     navigationMenuBorder: '#EAEAEA',
