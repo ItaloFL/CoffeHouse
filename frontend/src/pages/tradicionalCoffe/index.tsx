@@ -146,6 +146,8 @@ export function TradicionalCoffe({ toggleTheme }: Props) {
           </StatsItem>
         </StatsList>
 
+        <Detail />
+
         <TextTitle text="perguntas frequentes" />
         <TitleCoffe>Perguntas mais frequentes</TitleCoffe>
 
