@@ -2,8 +2,15 @@ import styled, { keyframes } from 'styled-components'
 import { Container } from '../../styles/layout/Container'
 import * as Accordion from '@radix-ui/react-accordion'
 
-
 export const GourmetCoffeWrapper = styled(Container)``
+
+export const IntroductionWrapper = styled.div`
+  @media (max-width: 968px) {
+    img {
+      display: none;
+    }
+  }
+`
 
 export const GourmetIntroduction = styled.div`
   margin-top: 150px;
@@ -11,6 +18,11 @@ export const GourmetIntroduction = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+
+  @media (max-width: 968px) {
+    margin-top: 80px;
+    flex-direction: column;
+  }
 `
 
 export const GourmetIntroductionDescriptionWrapper = styled.div`
@@ -22,13 +34,17 @@ export const GourmetIntroductionDescriptionWrapper = styled.div`
 export const GourmetIntroductionDescription = styled.p`
   font-family: var(--type-second);
   color: ${props => props.theme.colors.secondaryTextColor};
-  max-width: 634px;
+
+  @media (max-width: 968px) {
+    p {
+      margin-bottom: 40px;
+    }
+  }
 `
 
 export const GourmetIntroductionBox = styled.div`
   display: flex;
   flex-direction: column;
-  width: 304px;
   height: 205px;
   border: 2px solid #44d9ff;
   padding: 15px;
@@ -41,13 +57,22 @@ export const BoxGourmetTitle = styled.p`
   font-weight: bold;
   color: ${props => props.theme.colors.primaryTextColor};
   margin-bottom: 40px;
-  width: 200px;
+  max-width: 200px;
+
+  @media (max-width: 968px) {
+    max-width: 300px;
+    font-size: 20px;
+  }
 `
 
 export const BoxGourmetDescription = styled.p`
   font-family: var(--type-second);
   font-size: 14px;
   color: ${props => props.theme.colors.secondaryTextColor};
+
+  @media (max-width: 968px) {
+    font-size: 16px;
+  }
 `
 
 export const TitleSpan = styled.span`
@@ -56,12 +81,15 @@ export const TitleSpan = styled.span`
 
 export const DifCoffeWrapper = styled.div`
   margin-bottom: 120px;
+
+  @media (max-width: 720px) {
+    margin-bottom: 60px;
+  }
 `
 
 export const DifCoffeDescription = styled.p`
   font-family: var(--type-second);
   color: ${props => props.theme.colors.secondaryTextColor};
-  width: 784px;
   margin: 0 auto;
   margin-bottom: 60px;
 `
@@ -69,6 +97,18 @@ export const DifCoffeDescription = styled.p`
 export const WrapperDif = styled.div`
   display: flex;
   gap: 150px;
+
+  @media (max-width: 968px) {
+    gap: 0;
+  }
+`
+
+export const ImageWrapper = styled.div`
+  @media (max-width: 968px) {
+    img {
+      display: none;
+    }
+  }
 `
 
 export const IconWrapper = styled.span`
@@ -88,12 +128,11 @@ export const DifDescriptionItem = styled.p`
   font-family: var(--type-second);
   font-size: 14px;
   color: ${props => props.theme.colors.secondaryTextColor};
-  max-width: 370px;
 `
 
 export const DifItensWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 40px;
 `
 
@@ -102,23 +141,31 @@ export const WarningWrapper = styled.div`
   gap: 150px;
   justify-content: space-between;
   margin-bottom: 110px;
+
+  @media (max-width: 968px) {
+    gap: 60px;
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
 `
 export const WarningTitle = styled.div`
   font-size: 36px;
   font-weight: bold;
   color: ${props => props.theme.colors.primaryTextColor};
-  width: 401px;
 `
 
 export const TextWarning = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 564px;
   font-family: var(--type-second);
   font-size: 20px;
   font-weight: 500;
   color: ${props => props.theme.colors.secondaryTextColor};
+
+  @media (max-width: 968px) {
+    font-size: 14px;
+  }
 `
 const slideDown = keyframes({
   from: { height: 0 },
@@ -138,7 +185,7 @@ export const AccordionRoot = styled(Accordion.Root)`
 
 export const FrequentesTitle = styled(Accordion.Trigger)`
   border: none;
-  width: 520px;
+  width: 100%;
   height: 65px;
   cursor: pointer;
   text-align: start;
@@ -151,7 +198,6 @@ export const FrequentesTitle = styled(Accordion.Trigger)`
 `
 
 export const StyledContent = styled(Accordion.Content)`
-  max-width: 520px;
   overflow: hidden;
   font-size: 15;
   padding: 30px;

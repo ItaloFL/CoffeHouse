@@ -15,6 +15,8 @@ import {
   GourmetIntroductionBox,
   GourmetIntroductionDescription,
   IconWrapper,
+  ImageWrapper,
+  IntroductionWrapper,
   StyledContent,
   TextWarning,
   TitleDifItem,
@@ -28,7 +30,11 @@ import CoffesImage from '../../assets/coffeImages.svg'
 import MoneyIcon from '../../assets/money.svg'
 import ClockIcon from '../../assets/clock.svg'
 import PhoneIcon from '../../assets/phone.svg'
-import { TitleCoffe, TitleWrapper } from '../tradicionalCoffe/style'
+import {
+  ButtonDescription,
+  TitleCoffe,
+  TitleWrapper
+} from '../tradicionalCoffe/style'
 import * as Accordion from '@radix-ui/react-accordion'
 import { Plus } from 'phosphor-react'
 
@@ -41,42 +47,40 @@ export function GourmetCoffe({ toggleTheme }: Props) {
     <>
       <Header toggleTheme={toggleTheme} />
       <GourmetCoffeWrapper>
-        <GourmetIntroduction>
-          <GourmetIntroductionDescription>
-            <>
-              <Title
-                Text="A melhor maturação gourmet"
-                fontSize="48px"
-                width="900px"
-                marginBottom="20px"
-              />
-              Graõs arabicos com uma qualidade muito boa justamente para trazer
-              um gosto bom no seu consumo, sempre com qualidade e cuidado em
-              todos os nossos passos.
-            </>
-          </GourmetIntroductionDescription>
+        <IntroductionWrapper>
+          <GourmetIntroduction>
+            <GourmetIntroductionDescription>
+              <>
+                <Title Text="A melhor maturação gourmet" marginBottom="20px" />
+                <p>
+                  Graõs arabicos com uma qualidade muito boa justamente para
+                  trazer um gosto bom no seu consumo, sempre com qualidade e
+                  cuidado em todos os nossos passos.
+                </p>
+              </>
+            </GourmetIntroductionDescription>
 
-          <GourmetIntroductionBox>
-            <BoxGourmetTitle>
-              Seleção de graõs que <TitleSpan>não permite erros</TitleSpan> na
-              execução
-            </BoxGourmetTitle>
+            <GourmetIntroductionBox>
+              <BoxGourmetTitle>
+                Seleção de graõs que <TitleSpan>não permite erros</TitleSpan> na
+                execução
+              </BoxGourmetTitle>
 
-            <BoxGourmetDescription>
-              A principal diferença entre nosso café tradicional e o gourmet é
-              na hora da seleção de grãos.
-            </BoxGourmetDescription>
-          </GourmetIntroductionBox>
-        </GourmetIntroduction>
-
-        <img src={GourmetImage} alt="" style={{ marginBottom: '120px' }} />
+              <BoxGourmetDescription>
+                A principal diferença entre nosso café tradicional e o gourmet é
+                na hora da seleção de grãos.
+              </BoxGourmetDescription>
+            </GourmetIntroductionBox>
+          </GourmetIntroduction>
+          <img
+            src={GourmetImage}
+            alt=""
+            style={{ marginBottom: '120px', width: '100%' }}
+          />
+        </IntroductionWrapper>
 
         <DifCoffeWrapper>
-          <Title
-            Text="Diferenciais ao comprar conosco"
-            fontSize="48px"
-            width="710px"
-          />
+          <Title Text="Diferenciais ao comprar conosco" maxWidth="100%" />
           <DifCoffeDescription>
             Ao comprar um dos nossos produtos, você terá todos os nosso mimos
             descritos abaixo, para o contato, basta olhar em final da pagina e
@@ -84,7 +88,9 @@ export function GourmetCoffe({ toggleTheme }: Props) {
           </DifCoffeDescription>
 
           <WrapperDif>
-            <img src={CoffesImage} alt="" />
+            <ImageWrapper>
+              <img src={CoffesImage} alt="" />
+            </ImageWrapper>
 
             <DifItensWrapper>
               <div>
@@ -132,6 +138,7 @@ export function GourmetCoffe({ toggleTheme }: Props) {
         <WarningWrapper>
           <WarningTitle>
             Garanta já o seu, não perca essa <TitleSpan>oportunidade</TitleSpan>
+            <ButtonDescription>Estou interressado</ButtonDescription>
           </WarningTitle>
 
           <TextWarning>
