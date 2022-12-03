@@ -28,6 +28,9 @@ import ExtraForteImgCoffe from '../../assets/extraForte.png'
 import CalendaryIcon from '../../assets/calendary.svg'
 import EntregaIcon from '../../assets/entrega.svg'
 import LocalIcon from '../../assets/local.svg'
+import PeopleIcon from '../../assets/people-icon.svg'
+import ToolIcon from '../../assets/tools-icon.svg'
+import CheckIcon from '../../assets/check-icon.svg'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import * as Accordion from '@radix-ui/react-accordion'
@@ -101,32 +104,32 @@ export function ExtraForteCoffe({ toggleTheme }: Props) {
             </div>
 
             <div>
-              <img src={CalendaryIcon} alt="" />
+              <img src={CheckIcon} alt="" />
 
-              <DiferentialItemTitle>10 Anos de mercado</DiferentialItemTitle>
+              <DiferentialItemTitle>Qualidade sempre</DiferentialItemTitle>
 
               <DiferentialItemText>
-                A anos no mercado querendo o melhor do consumidor.
+                Sempre queremos o melhor para o nossos clientes.
               </DiferentialItemText>
             </div>
 
             <div>
-              <img src={LocalIcon} alt="" />
+              <img src={PeopleIcon} alt="" />
 
-              <DiferentialItemTitle>Local organizado</DiferentialItemTitle>
+              <DiferentialItemTitle>Equipe séria</DiferentialItemTitle>
 
               <DiferentialItemText>
-                Seriedade na contrução e mantimento do local.
+                Completamente capazes de fazer o melhor.
               </DiferentialItemText>
             </div>
 
             <div>
-              <img src={EntregaIcon} alt="" />
+              <img src={ToolIcon} alt="" />
 
-              <DiferentialItemTitle>Entregas rapidas</DiferentialItemTitle>
+              <DiferentialItemTitle>Ferramentas novas</DiferentialItemTitle>
 
               <DiferentialItemText>
-                Entrega para todo o Brasil com a maior velocidade.
+                Ferramentas sempre na maior qualidade e tecnologia.
               </DiferentialItemText>
             </div>
           </ListDifferentialWrapper>
@@ -169,21 +172,20 @@ export function ExtraForteCoffe({ toggleTheme }: Props) {
               </TitleWrapper>
             </FrequentesTitle>
             <StyledContent>
-              O café atual é o Gourmet, feito com muito carinho desde a seleção
-              dos seus grãos
+              O Extra Forte, nosso café para quem gosta de tomar um café amargo
+              e o sabor reforçado.
             </StyledContent>
           </Accordion.Item>
           <Accordion.Item value="item-2">
             <FrequentesTitle>
               <TitleWrapper>
-                Existe alguma diferença entre os gourmet?
+                Como é o processo dos grãos?
                 <Plus size={25} color="currentcolor" />
               </TitleWrapper>
             </FrequentesTitle>
             <StyledContent>
-              Existem, principalmente no modo de preparo, algo que é feito em
-              todos os cafés é a escolha dos grãos sem erros, poré, alguns tem a
-              torrefação mais forte, e alguns uma maturação por maior tempo.
+              Não é tão atencioso como o café Gourmet, pois a torrefação é mais
+              forte para os grãos terem o sabor forte.
             </StyledContent>
           </Accordion.Item>
           <Accordion.Item value="item-3">
