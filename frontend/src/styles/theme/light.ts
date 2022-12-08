@@ -23,6 +23,7 @@ export const light = {
     navigationMenuBorder: '#EAEAEA',
     linkFooterHover: '#161617',
     hoverNavigationMenuItem: '#FAFAFA',
-    hoverColor: '#FAFAFA'
+    hoverColor: '#FAFAFA',
+    headerHover: '#000000'
   }
 }

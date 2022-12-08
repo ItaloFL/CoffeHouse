@@ -23,7 +23,7 @@ export const dark = {
     navigationMenuBorder: '#36363C',
     linkFooterHover: '#FFFFFF',
     hoverNavigationMenuItem: '#36363C',
-    hoverColor: '#161616'
-
+    hoverColor: '#161616',
+    headerHover: '#FFFFFF'
   }
 }
