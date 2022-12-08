@@ -155,14 +155,6 @@ export const NavigationMenuViewport = styled(NavigationMenu.Viewport)`
 
 export const NavigationMenuItem = styled(NavigationMenu.Item)`
   padding: 28px 0px 28px;
-  border-bottom: 2px solid transparent;
-
-  &:hover {
-    color: white;
-    border-radius: 2px;
-    border-color: #297df9;
-    transition: all 0.2s ease;
-  }
 `
 
 export const NavigationMenuTrigger = styled(NavigationMenu.Trigger)`
@@ -172,7 +164,10 @@ export const NavigationMenuTrigger = styled(NavigationMenu.Trigger)`
 export const NavigationMenuLink = styled(NavigationMenu.Link)`
   text-decoration: none;
   color: #a6aaad;
-  width: 0;
+
+  &:hover {
+    color: ${props => props.theme.colors.headerHover}
+  }
 `
 
 export const MenuButtonIcon = styled.div`

@@ -8,6 +8,7 @@ import {
   CoffeItens,
   CoffeTitle,
   CoffeWrapper,
+  ContentWrapper,
   DescriptionText,
   DescriptionWrapper
 } from './style'
@@ -46,7 +47,7 @@ export function Coffe() {
             </CoffeItem>
           </CoffeItens>
           {coffe === 'tradicional' ? (
-            <div>
+            <ContentWrapper>
               <CoffeTitle>Conheça o nosso tipo de café tradicional</CoffeTitle>
               <DescriptionWrapper>
                 <DescriptionText>
@@ -58,11 +59,11 @@ export function Coffe() {
               </DescriptionWrapper>
 
               <img src={coffeTradicionalImage} alt="" />
-            </div>
+            </ContentWrapper>
           ) : null}
 
           {coffe === 'gourmet' ? (
-            <div>
+            <ContentWrapper>
               <CoffeTitle>Venha experimentar nosso Gourmet</CoffeTitle>
               <DescriptionWrapper>
                 <DescriptionText>
@@ -74,11 +75,11 @@ export function Coffe() {
               </DescriptionWrapper>
 
               <img src={coffeGourmetImage} alt="" />
-            </div>
+            </ContentWrapper>
           ) : null}
 
           {coffe === 'extraforte' ? (
-            <div>
+            <ContentWrapper>
               <CoffeTitle>Olhe tambem o ExtraForte</CoffeTitle>
               <DescriptionWrapper>
                 <DescriptionText>
@@ -89,7 +90,7 @@ export function Coffe() {
               </DescriptionWrapper>
 
               <img src={coffeExtraForteImage} alt="" />
-            </div>
+            </ContentWrapper>
           ) : null}
         </CoffeItemWrapperTeste>
       </CoffeItemWrapper>
