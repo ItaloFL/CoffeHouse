@@ -22,6 +22,7 @@ import { useState } from 'react'
 
 export function Coffe() {
   const [coffe, setCoffe] = useState('tradicional')
+  const [coffeActived, setCoffeActived] = useState('tradicional')
 
   return (
     <CoffeWrapper>
@@ -33,15 +34,33 @@ export function Coffe() {
       <CoffeItemWrapper>
         <CoffeItemWrapperTeste>
           <CoffeItens>
-            <CoffeItem onClick={() => setCoffe('tradicional')}>
+            <CoffeItem
+              className={coffeActived === 'tradicional' ? 'active' : undefined}
+              onClick={() => {
+                setCoffe('tradicional')
+                setCoffeActived('tradicional')
+              }}
+            >
               <img src={tradicionalCoffeImage} alt="" />
               <p>Tradicional</p>
             </CoffeItem>
-            <CoffeItem onClick={() => setCoffe('gourmet')}>
+            <CoffeItem
+              className={coffeActived === 'gourmet' ? 'active' : undefined}
+              onClick={() => {
+                setCoffe('gourmet')
+                setCoffeActived('gourmet')
+              }}
+            >
               <img src={gourmetCoffeImage} alt="" />
               <p>Gourmet</p>
             </CoffeItem>
-            <CoffeItem onClick={() => setCoffe('extraforte')}>
+            <CoffeItem
+              className={coffeActived === 'extraforte' ? 'active' : undefined}
+              onClick={() => {
+                setCoffe('extraforte')
+                setCoffeActived('extraforte')
+              }}
+            >
               <img src={extraforteCoffeImage} alt="" />
               <p>Extra Forte</p>
             </CoffeItem>

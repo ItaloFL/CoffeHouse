@@ -5,8 +5,8 @@ export const CoffeWrapper = styled(Container)``
 
 export const CoffeItemWrapper = styled.div`
   display: flex;
-  margin-top: 90px;
-  margin-bottom: 110px;
+  margin-top: 110px;
+  margin-bottom: 250px;
 
   @media (max-width: 900px) {
     align-items: center;
@@ -25,6 +25,11 @@ export const CoffeItem = styled.button`
   padding: 10px;
   border-radius: 4px;
   border: 1px solid transparent;
+
+  &.active {
+    background-color: ${props => props.theme.colors.hoverColor};
+    border-color: ${props => props.theme.colors.borderColor};
+  }
 
   &:hover,
   &:focus {
@@ -117,10 +122,15 @@ export const ButtonCoffe = styled.button`
   width: 170px;
   height: 52px;
   padding: 5px;
-  background-color: ${props => props.theme.colors.detailTitleColorHover};
+  background-color: ${props => props.theme.colors.buttonBackgroudColor};
   color: ${props => props.theme.colors.primaryTextColor};
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
   border: none;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.buttonBackgroudColorHover};
+    transition: 200ms;
+  }
 `
