@@ -1,25 +1,42 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
+export const IntroductionAnimationFadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`
 export const IntroContent = styled.div`
   display: block;
   margin: 150px auto;
+  text-align: center;
+
+  img {
+    margin-top: 90px;
+  }
 
   .LinkButton {
     display: block;
     width: 290px;
     height: 55px;
     color: ${props => props.theme.colors.primaryTextColor};
-    background: linear-gradient(#5391ed, #154c9c);
+    background: ${props => props.theme.colors.buttonBackgroudColor};
     cursor: pointer;
     text-transform: uppercase;
     border-radius: 4px;
     text-decoration: none;
     padding: 17px 79px;
     margin: 0 auto;
+    transition: background 200ms;
 
     :hover,
     :focus {
-      background: linear-gradient(#71aaff, #1354b4);
+      background: ${props => props.theme.colors.buttonBackgroudColorHover};
     }
   }
 `
@@ -31,6 +48,7 @@ export const IntroDescription = styled.p`
   max-width: 450px;
   margin: 40px auto;
   line-height: 1.2;
+  animation: ${IntroductionAnimationFadeIn} 0.6s ease-out;
 
   @media (max-width: 768px) {
     font-size: 1rem;

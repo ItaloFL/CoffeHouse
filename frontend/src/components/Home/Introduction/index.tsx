@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { Button } from '../../Button'
 import { Title } from '../../Title'
 import { IntroContent, IntroDescription } from './style'
+import TypesCoffeImage from '../../../assets/introductionImage.jpg'
 
 export function Introduction() {
   return (
@@ -20,6 +20,8 @@ export function Introduction() {
         <Link className="LinkButton" to="signup">
           Venha conosco
         </Link>
+
+        <img src={TypesCoffeImage} alt="" />
       </IntroContent>
     </>
   )
