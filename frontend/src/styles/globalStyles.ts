@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, keyframes } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -29,6 +29,29 @@ export const GlobalStyles = createGlobalStyle`
 
   .container {
     max-width: 70rem;
+  }
+`
+export const FadeLeftAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
+
+export const FadeRightAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 `
 

@@ -24,6 +24,8 @@ export const light = {
     linkFooterHover: '#161617',
     hoverNavigationMenuItem: '#FAFAFA',
     hoverColor: '#FAFAFA',
-    headerHover: '#000000'
+    headerHover: '#000000',
+    buttonBackgroudColor: '#7CAAEF',
+    buttonBackgroudColorHover: '#5586CD'
   }
 }

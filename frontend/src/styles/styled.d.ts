@@ -28,6 +28,8 @@ declare module 'styled-components' {
       hoverNavigationMenuItem: string
       hoverColor: string
       headerHover: string
+      buttonBackgroudColor: string
+      buttonBackgroudColorHover: string
     }
   }
 }

@@ -24,6 +24,8 @@ export const dark = {
     linkFooterHover: '#FFFFFF',
     hoverNavigationMenuItem: '#36363C',
     hoverColor: '#161616',
-    headerHover: '#FFFFFF'
+    headerHover: '#FFFFFF',
+    buttonBackgroudColor: '#7CAAEF',
+    buttonBackgroudColorHover: '#5586CD'
   }
 }
