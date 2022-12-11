@@ -1,18 +1,7 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { Container } from '../../styles/layout/Container'
 import ArrowIcon from '../../assets/left-arrow.svg'
-
-export const FadeLeftAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`
+import { FadeLeftAnimation } from '../../styles/globalStyles'
 
 export const SignUpWrapper = styled(Container)`
   display: grid;

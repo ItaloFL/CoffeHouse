@@ -1,17 +1,6 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
+import { FadeRightAnimation } from '../../styles/globalStyles'
 import { Container } from '../../styles/layout/Container'
-
-export const FadeRightAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`
 
 export const SignInWrapper = styled(Container)`
   display: grid;
