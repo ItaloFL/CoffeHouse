@@ -10,6 +10,8 @@ import {
 import selecionadosIcon from '../../../assets/selecionados.svg'
 import graosIcon from '../../../assets/grãos.svg'
 import torrefacaoIcon from '../../../assets/torrefacao.svg'
+import { useEffect, useRef, useState } from 'react'
+import { useElementOnScreen } from '../../../utils/useElementOnScreen'
 
 export const typesCoffe = [
   {
@@ -33,12 +35,16 @@ export const typesCoffe = [
 ]
 
 export function MethodCoffe() {
+  const [elementRef, isVisible] = useElementOnScreen()
   return (
     <>
-      <MethodWrapper>
+      <MethodWrapper
+        ref={elementRef}
+        className={isVisible ? 'visible' : undefined}
+      >
         <Title
           Text="Os métodos que usamos para a qualidade de nossos cafés"
-          maxWidth='547px'
+          maxWidth="547px"
         />
         <MethodList>
           {typesCoffe.map(type => (

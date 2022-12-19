@@ -33,6 +33,7 @@ export const IntroContent = styled.div`
     padding: 17px 79px;
     margin: 0 auto;
     transition: background 200ms;
+    animation: ${IntroductionAnimationFadeIn} 0.7s ease-in-out;
 
     :hover,
     :focus {
@@ -53,5 +54,20 @@ export const IntroDescription = styled.p`
   @media (max-width: 768px) {
     font-size: 1rem;
     max-width: 400px;
+  }
+`
+export const ImageWrapper = styled.div`
+  animation: ${IntroductionAnimationFadeIn} 0.8s ease-in-out;
+
+  @media (max-width: 900px) {
+    img {
+      width: 600px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    img {
+      width: 90%;
+    }
   }
 `

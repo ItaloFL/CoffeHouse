@@ -160,13 +160,19 @@ export const NavigationMenuItem = styled(NavigationMenu.Item)`
 export const NavigationMenuTrigger = styled(NavigationMenu.Trigger)`
   all: unset;
   color: #a6aaad;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+  }
 `
 export const NavigationMenuLink = styled(NavigationMenu.Link)`
   text-decoration: none;
   color: #a6aaad;
 
   &:hover {
-    color: ${props => props.theme.colors.headerHover}
+    color: ${props => props.theme.colors.headerHover};
   }
 `
 

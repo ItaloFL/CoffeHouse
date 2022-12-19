@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Title } from '../../Title'
-import { IntroContent, IntroDescription } from './style'
+import { ImageWrapper, IntroContent, IntroDescription } from './style'
 import TypesCoffeImage from '../../../assets/introductionImage.jpg'
 
 export function Introduction() {
@@ -21,7 +21,9 @@ export function Introduction() {
           Venha conosco
         </Link>
 
-        <img src={TypesCoffeImage} alt="" />
+        <ImageWrapper>
+          <img src={TypesCoffeImage} alt="" />
+        </ImageWrapper>
       </IntroContent>
     </>
   )

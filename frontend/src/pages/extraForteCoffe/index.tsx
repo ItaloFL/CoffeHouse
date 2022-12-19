@@ -1,9 +1,5 @@
 import { Clock, Fire, Plus } from 'phosphor-react'
-import {
-  ButtonDescription,
-  TitleCoffe,
-  TitleWrapper
-} from '../tradicionalCoffe/style'
+
 import {
   AccordionRoot,
   DiferentialItemText,
@@ -34,6 +30,8 @@ import CheckIcon from '../../assets/check-icon.svg'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import * as Accordion from '@radix-ui/react-accordion'
+import { TitleWrapper } from '../tradicionalCoffe/Frequents/style'
+import { ButtonDescription, TitleCoffe } from '../tradicionalCoffe/AboutCoffe/style'
 
 type Props = {
   toggleTheme(): void

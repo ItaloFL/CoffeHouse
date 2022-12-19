@@ -36,7 +36,7 @@ export const SignUpText = styled.p`
   font-family: var(--type-second);
   display: flex;
   gap: 7px;
-  color: #ffffff;
+  color: ${props => props.theme.colors.primaryTextColor};
 
   .link {
     text-decoration: none;

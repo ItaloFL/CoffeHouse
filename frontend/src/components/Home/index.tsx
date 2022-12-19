@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Coffe } from '../Coffes'
 import { Footer } from '../Footer'
 import { Header } from '../Header'
@@ -11,7 +12,7 @@ type Props = {
 export function Home({ toggleTheme }: Props) {
   return (
     <>
-      <Header toggleTheme={toggleTheme}/>
+      <Header toggleTheme={toggleTheme} />
       <Introduction />
       <Coffe />
       <MethodCoffe />

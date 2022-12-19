@@ -1,7 +1,47 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Container } from '../../styles/layout/Container'
 
-export const CoffeWrapper = styled(Container)``
+export const FadeInAnimation = keyframes`
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+`
+
+export const FadeRightAnimation = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
+
+export const FadeLeftAnimation = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
+
+export const CoffeWrapper = styled(Container)`
+  &.visible {
+    animation: ${FadeInAnimation} 0.6s ease-in-out;
+  }
+`
 
 export const CoffeItemWrapper = styled.div`
   display: flex;
@@ -85,6 +125,27 @@ export const CoffeItemWrapperTeste = styled.div`
 `
 
 export const ContentWrapper = styled.div`
+  .ButtonCoffe {
+    width: 170px;
+    height: 45px;
+    padding: 5px;
+    padding-top: 13px;
+    background-color: ${props => props.theme.colors.buttonBackgroudColor};
+    color: ${props => props.theme.colors.primaryTextColor};
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: ${props =>
+        props.theme.colors.buttonBackgroudColorHover};
+      transition: 200ms;
+    }
+  }
   @media (max-width: 768px) {
     img {
       width: 100%;
@@ -97,6 +158,10 @@ export const CoffeTitle = styled.p`
   font-weight: bold;
   color: ${props => props.theme.colors.primaryTextColor};
 
+  &.visible {
+    animation: ${FadeInAnimation} 0.6s ease-in;
+  }
+
   @media (max-width: 768px) {
     font-size: 1.5rem;
   }
@@ -107,6 +172,7 @@ export const DescriptionWrapper = styled.div`
   gap: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+  align-items: center;
 
   @media (max-width: 900px) {
     flex-direction: column;
@@ -116,21 +182,16 @@ export const DescriptionWrapper = styled.div`
 export const DescriptionText = styled.p`
   font-family: var(--type-second);
   color: ${props => props.theme.colors.secondaryTextColor};
-`
 
-export const ButtonCoffe = styled.button`
-  width: 170px;
-  height: 52px;
-  padding: 5px;
-  background-color: ${props => props.theme.colors.buttonBackgroudColor};
-  color: ${props => props.theme.colors.primaryTextColor};
-  text-transform: uppercase;
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
-
-  &:hover {
-    background-color: ${props => props.theme.colors.buttonBackgroudColorHover};
-    transition: 200ms;
+  &.visible {
+    animation: ${FadeRightAnimation} 0.8s ease-in-out;
   }
 `
+
+export const ImageWrapper = styled.div`
+  &.visible {
+    animation: ${FadeInAnimation} 0.8s ease-in-out;
+  }
+`
+
+
