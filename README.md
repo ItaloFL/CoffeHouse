@@ -8,8 +8,9 @@
 
 # 🎉 Design no Figma
 
-  
+  ![coffe-house-figma](https://github.com/ItaloFL/CoffeHouse/assets/83084631/ad9f5e17-1896-4a66-92a3-3dbef7328d3b)
 
+https://www.figma.com/file/o74sEDIYQDQLfqFhiB2zTD/Coffe-Delivery?type=design&node-id=0%3A1&mode=design&t=c1KQgAyxOpwNiwm2-1
 ---
 
 # 📜 Sobre o projeto
